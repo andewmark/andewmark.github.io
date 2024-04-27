@@ -1,0 +1,75 @@
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Saira Extra Condensed', serif;
+    overflow-x: hidden;
+}
+
+nav {
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color:#153448;
+    overflow-x: hidden;
+    padding-top: 20px;
+    box-shadow: 2px 2px 20px rgba(0,0,0,3);
+    text-align: center;
+    scroll-behavior: smooth;
+}
+
+nav > a {
+    padding: 12px 13px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-size: 26px;
+    color: white;
+    display: block;
+    position: relative;
+    top: 300px;
+    margin: 2px;
+}
+
+.active {
+    font-weight: 550;
+}
+
+.About{
+    position: relative;
+    left: 10px;
+}
+
+#name {
+    font-weight: 1000;
+    font-size: 3rem;
+    text-transform: uppercase;
+    position: relative;
+    left: 400px;
+    top: 200px;
+}
+
+#name span {
+    color: #dd5901;
+}
+
+.img_container {
+    float: right;
+    margin-right: 100px;
+    background-color: #153448;
+    height: 700px;
+    width: 530px;
+    text-align: center;
+    border-radius: 22px;
+    box-shadow: 2px 2px 20px rgba(0,0,0,3);
+}
+
+.About img {
+    height: 660px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 10px;
+}
+
