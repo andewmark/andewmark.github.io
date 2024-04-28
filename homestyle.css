@@ -50,11 +50,13 @@ nav > a:hover:not(.active) {
     text-transform: uppercase;
     position: absolute;
     left: 17%;
+    flex-direction: column;
 }
 
 #name {
     font-weight: 1000;
     font-size: 4.5vw;
+    margin-bottom: -4.0vw; 
 }
 
 #name span {
@@ -62,25 +64,31 @@ nav > a:hover:not(.active) {
 }
 
 #title {
-    font-size: 2vw;
-    position:fixed;
-    bottom: 52%;
+    font-size: 2.5vw;
+    font-weight: 500px;
     color: #4e4848;
 }
 
 #line3 {
     color: #857f7f;
+    font-size: 1.5vw;
+    font-weight: 200px;
 }
 
-#line3 {
+#line3 a {
+    color: #dd5901;
+}
 
+#line3 a:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .About img {
     height: auto;
     border: 0.7vw solid #153448;
     border-radius: 22px;
-    width: 25%;
+    width: 30%;
     margin-right: 5%;
     position: fixed;
     top: 10%;
