@@ -2,13 +2,13 @@ body {
     background-color: white;
     margin: 0;
     padding: 0;
-    font-family: 'Saira Extra Condensed', serif;
+    font-family: 'Open Sans', serif;
     overflow-x: hidden;
 }
 
 nav {
     height: 100%;
-    width: 25%;
+    width: 15%;
     position: fixed;
     left: 0;
     top: 0;
@@ -22,7 +22,7 @@ nav > a {
     padding: 12px 13px;
     margin-bottom: 1%;
     text-decoration: none;
-    font-size: 26px;
+    font-size: 1.7vw;
     color: white;
     display: block;
     position: relative;
@@ -39,10 +39,13 @@ nav > a {
 }
 
 #name {
+    font-family: 'Saira Extra Condensed', serif;
     font-weight: 1000;
-    font-size: 30px;
+    font-size: 4.5vw;
+    margin-top: 15%;
     text-transform: uppercase;
-    position: relative;
+    position: absolute;
+    left: 16%;
 }
 
 #name span {
