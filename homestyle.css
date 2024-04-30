@@ -7,13 +7,17 @@ body {
     text-transform: uppercase;
 }
 
+body::-webkit-scrollbar { 
+    display: none;
+}
+
 nav {
     height: 100%;
     width: 15%;
     position: fixed;
     left: 0;
     top: 0;
-    background-color:#153448;
+    background-color: #153448;
     overflow-x: hidden;
     box-shadow: 5px 5px 20px rgba(0,0,0,3);
     text-align: center;
@@ -34,23 +38,39 @@ nav > a:hover:not(.active) {
     color: rgb(189, 189, 189);
 }
 
+.layout2 {
+    margin: 0;
+    margin-left: 15%;
+}
+
 .active {
     color: white;
 }
 
-.About{
-    position: relative;
-    left: 10px;
+.About {
+    display: flexbox;
+    height: 110vh;
+    margin-top: -5%;
 }
 
 .info {
-    display: flexbox;
     font-family: 'Saira Extra Condensed', serif;
-    margin-top: 10%;
     text-transform: uppercase;
-    position: absolute;
-    left: 17%;
-    flex-direction: column;
+    margin-left: 3%;
+    position: relative;
+    top: 25%;
+}
+
+.About img {
+    float: right;
+    width: 35%;
+    height: auto;
+    border: 0.7vw solid #153448;
+    border-radius: 22px;
+    box-shadow: 2px 2px 20px rgba(0,0,0,3);
+    margin-right: 5%;
+    position: relative;
+    bottom: 35%;
 }
 
 #name {
@@ -75,27 +95,76 @@ nav > a:hover:not(.active) {
     font-weight: 200px;
 }
 
-#line3 a {
+a {
     color: #dd5901;
+    text-decoration: none;
 }
 
-#line3 a:hover {
+a:hover {
     text-decoration: underline;
     cursor: pointer;
 }
 
-.About img {
-    height: auto;
-    border: 0.7vw solid #153448;
-    border-radius: 22px;
-    width: 30%;
-    margin-right: 5%;
-    position: fixed;
-    top: 10%;
-    right: 0;
-    box-shadow: 2px 2px 20px rgba(0,0,0,3);
+#resume {
+    font-family: 'Open Sans', serif;
 }
 
+.inline > a {
+    height: 4%;
+    width: 12%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-right: 1%;
+    font-size: 2.5vw;
+    background-color: #153448;
+    color: white;
+    position: relative;
+    right: 4%;
+    border-radius: 50px;
+}
+
+.inline > a:hover {
+    background-color: white;
+    color: black;
+    transition: 0.25s ease-in-out;
+}
+
+
+/* Experience */
+.Experience {
+    height: 110vh;
+    display: flexbox;
+    height: 110vh;
+    background-color: purple;
+    margin-top: -5%;
+}
+
+/* Education */
+.Education {
+    height: 110vh;
+    display: flexbox;
+    height: 110vh;
+    background-color: blue;
+    margin-top: -5%;
+}
+
+/* Projects */
+.Projects {
+    height: 110vh;
+    display: flexbox;
+    height: 110vh;
+    background-color: darkgoldenrod;
+    margin-top: -5%;
+}
+
+/* Skills */
+.Skills {
+    height: 110vh;
+    display: flexbox;
+    height: 110vh;
+    background-color: darkgoldenrod;
+    margin-top: -5%;
+}
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 
