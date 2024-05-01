@@ -5,6 +5,7 @@ body {
     font-family: 'Open Sans', serif;
     overflow-x: hidden;
     text-transform: uppercase;
+
 }
 
 body::-webkit-scrollbar { 
@@ -112,8 +113,8 @@ a:hover {
 .inline > a {
     height: 4%;
     width: 12%;
-    padding-left: 1%;
-    padding-right: 1%;
+    padding-left: 1.1%;
+    padding-right: 1.1%;
     margin-right: 1%;
     font-size: 2.5vw;
     background-color: #153448;
@@ -124,8 +125,7 @@ a:hover {
 }
 
 .inline > a:hover {
-    background-color: white;
-    color: black;
+    background-color: #dd5901;
     transition: 0.25s ease-in-out;
 }
 
