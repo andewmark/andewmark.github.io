@@ -52,6 +52,7 @@ nav > a:hover:not(.active) {
     display: flexbox;
     height: 110vh;
     margin-top: -5%;
+    justify-content: flex-end; /* Pushes content to bottom */
 }
 
 .info {
@@ -71,7 +72,8 @@ nav > a:hover:not(.active) {
     box-shadow: 2px 2px 20px rgba(0,0,0,3);
     margin-right: 5%;
     position: relative;
-    bottom: 35%;
+    bottom: 40%;
+    
 }
 
 #name {
@@ -88,6 +90,14 @@ nav > a:hover:not(.active) {
     font-size: 2.5vw;
     font-weight: 500px;
     color: #4e4848;
+}
+
+#statement {
+    font-size: 1.5vw;
+}
+
+#resume {
+    font-size: 1.0vw;
 }
 
 #line3 {
@@ -136,7 +146,7 @@ a:hover {
     display: flexbox;
     height: 110vh;
     background-color: purple;
-    margin-top: -5%;
+    padding-top: 2%;
 }
 
 /* Education */
@@ -145,7 +155,7 @@ a:hover {
     display: flexbox;
     height: 110vh;
     background-color: blue;
-    margin-top: -5%;
+    padding-top: 3%;
 }
 
 /* Projects */
@@ -154,7 +164,7 @@ a:hover {
     display: flexbox;
     height: 110vh;
     background-color: darkgoldenrod;
-    margin-top: -5%;
+    padding-top: 3%;
 }
 
 /* Skills */
@@ -163,22 +173,54 @@ a:hover {
     display: flexbox;
     height: 110vh;
     background-color: darkgoldenrod;
-    margin-top: -5%;
+    padding-top: 3%;
 }
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 786px) { 
+@media (max-width: 786px) { 
+    .About img {
+        display: none;
+    }
+ }
 
+ @media (max-height: 700px) {
+    .About img {
+        float: right;
+        width: 30%;
+        height: auto;
+        border: 0.7vw solid #153448;
+        border-radius: 22px;
+        box-shadow: 2px 2px 20px rgba(0,0,0,3);
+        margin-right: 5%;
+        position: relative;
+        bottom: 35%;
+        
+    }
+ }
+
+ @media (max-height: 620px) {
+    .About img {
+        float: right;
+        width: 25%;
+        height: auto;
+        border: 0.7vw solid #153448;
+        border-radius: 22px;
+        box-shadow: 2px 2px 20px rgba(0,0,0,3);
+        margin-right: 5%;
+        position: relative;
+        bottom: 35%;
+        
+    }
  }
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
-
+@media (max-width: 1024px) { 
+    
  }
 
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
+@media (max-width: 1200px) { 
 
  }
