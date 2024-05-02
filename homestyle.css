@@ -5,7 +5,6 @@ body {
     font-family: 'Open Sans', serif;
     overflow-x: hidden;
     text-transform: uppercase;
-
 }
 
 body::-webkit-scrollbar { 
@@ -53,14 +52,15 @@ nav > a:hover:not(.active) {
     height: 110vh;
     margin-top: -5%;
     justify-content: flex-end; /* Pushes content to bottom */
+    border-bottom: 1px solid #857f7f;
 }
 
 .info {
     font-family: 'Saira Extra Condensed', serif;
     text-transform: uppercase;
-    margin-left: 3%;
     position: relative;
     top: 25%;
+    margin-left: 3%;
 }
 
 .About img {
@@ -80,6 +80,7 @@ nav > a:hover:not(.active) {
     font-weight: 1000;
     font-size: 4.5vw;
     margin-bottom: -4.0vw; 
+    color: #153448
 }
 
 #name span {
@@ -98,6 +99,8 @@ nav > a:hover:not(.active) {
 
 #resume {
     font-size: 1.0vw;
+    font-family: 'Open Sans', serif;
+    text-transform: none;
 }
 
 #line3 {
@@ -116,10 +119,6 @@ a:hover {
     cursor: pointer;
 }
 
-#resume {
-    font-family: 'Open Sans', serif;
-}
-
 .inline > a {
     height: 4%;
     width: 12%;
@@ -130,7 +129,7 @@ a:hover {
     background-color: #153448;
     color: white;
     position: relative;
-    right: 4%;
+    right: 3%;
     border-radius: 50px;
 }
 
@@ -142,19 +141,68 @@ a:hover {
 
 /* Experience */
 .Experience {
-    height: 110vh;
     display: flexbox;
-    height: 110vh;
-    background-color: purple;
     padding-top: 2%;
+    margin: 0 3%;
+    box-sizing: border-box; 
+    font-family: 'Saira Extra Condensed', serif;
+    border-bottom: 1px solid #857f7f;
 }
+
+.resume-item {
+    display: flex;
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+.resume-content {
+    float: left;
+    width: 80%;
+    font-family: 'Open Sans', serif;
+    text-transform: none;
+}
+
+.resume-date {
+    width: 20%;
+    font-size: 1.1vw;
+    margin-top: 0;
+    font-family: 'Open Sans', serif;
+    text-transform: none;
+}
+
+.resume-date span {
+    float: right;
+}
+
+.Experience h1 {
+    font-size: 3.0vw;
+    color: #153448;
+}
+
+.job-title {
+    margin-top: 0;
+    text-transform: uppercase;
+    font-size: 1.5vw;
+    margin-bottom: -1%;
+}
+
+.company-name {
+    text-transform: none;
+    font-size: 1.0vw;
+    color: #857f7f;
+}
+
+.bullets {
+    font-size: 0.9vw;
+}
+
+
 
 /* Education */
 .Education {
     height: 110vh;
     display: flexbox;
     height: 110vh;
-    background-color: blue;
     padding-top: 3%;
 }
 
