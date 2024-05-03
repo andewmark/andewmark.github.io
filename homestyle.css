@@ -36,6 +36,11 @@ nav > a {
 
 nav > a:hover:not(.active) {
     color: rgb(189, 189, 189);
+    text-decoration: none;
+}
+
+nav > a:hover {
+    text-decoration: none;
 }
 
 .layout2 {
@@ -52,7 +57,7 @@ nav > a:hover:not(.active) {
     height: 110vh;
     margin-top: -5%;
     justify-content: flex-end; /* Pushes content to bottom */
-    border-bottom: 1px solid #857f7f;
+    border-bottom: 2px solid #dbdbdb;
 }
 
 .info {
@@ -73,7 +78,6 @@ nav > a:hover:not(.active) {
     margin-right: 5%;
     position: relative;
     bottom: 40%;
-    
 }
 
 #name {
@@ -146,7 +150,7 @@ a:hover {
     margin: 0 3%;
     box-sizing: border-box; 
     font-family: 'Saira Extra Condensed', serif;
-    border-bottom: 1px solid #857f7f;
+    border-bottom: 2px solid #dbdbdb;
 }
 
 .resume-item {
@@ -182,18 +186,18 @@ a:hover {
 .job-title {
     margin-top: 0;
     text-transform: uppercase;
-    font-size: 1.5vw;
+    font-size: 1.4vw;
     margin-bottom: -1%;
 }
 
 .company-name {
     text-transform: none;
-    font-size: 1.0vw;
+    font-size: 1.15vw;
     color: #857f7f;
 }
 
 .bullets {
-    font-size: 0.9vw;
+    font-size: 1.0vw;
 }
 
 
@@ -233,39 +237,19 @@ a:hover {
     }
  }
 
- @media (max-height: 700px) {
-    .About img {
-        float: right;
-        width: 30%;
-        height: auto;
-        border: 0.7vw solid #153448;
-        border-radius: 22px;
-        box-shadow: 2px 2px 20px rgba(0,0,0,3);
-        margin-right: 5%;
-        position: relative;
-        bottom: 35%;
-        
-    }
- }
-
- @media (max-height: 620px) {
-    .About img {
-        float: right;
-        width: 25%;
-        height: auto;
-        border: 0.7vw solid #153448;
-        border-radius: 22px;
-        box-shadow: 2px 2px 20px rgba(0,0,0,3);
-        margin-right: 5%;
-        position: relative;
-        bottom: 35%;
-        
-    }
- }
-
 /* Medium devices (desktops, 992px and up) */
-@media (max-width: 1024px) { 
-    
+@media (max-width: 1075px) { 
+    .About img {
+        float: right;
+        width: 35%;
+        height: auto;
+        border: 0.7vw solid #153448;
+        border-radius: 22px;
+        box-shadow: 2px 2px 20px rgba(0,0,0,3);
+        margin-right: 5%;
+        position: relative;
+        bottom: 20%;
+    }
  }
 
 /* Large devices (large desktops, 1200px and up) */
