@@ -11,6 +11,12 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+h1 {
+    font-size: 3.0vw;
+    color: #153448;
+    font-family: 'Saira Extra Condensed', serif;
+}
+
 nav {
     height: 100%;
     width: 15%;
@@ -178,11 +184,6 @@ a:hover {
     float: right;
 }
 
-.Experience h1 {
-    font-size: 3.0vw;
-    color: #153448;
-}
-
 .job-title {
     margin-top: 0;
     text-transform: uppercase;
@@ -208,6 +209,19 @@ a:hover {
     display: flexbox;
     height: 110vh;
     padding-top: 3%;
+    margin: 0 3%;
+}
+
+.Education #company-name {
+    color: #3f3f3f;
+    font-weight: 300;
+}
+
+.Education .bullets {
+    list-style-type: none;
+    padding: 0;
+    color: #202020;
+    font-weight: 800;
 }
 
 /* Projects */
@@ -217,6 +231,7 @@ a:hover {
     height: 110vh;
     background-color: darkgoldenrod;
     padding-top: 3%;
+    margin: 0 3%;
 }
 
 /* Skills */
@@ -226,6 +241,7 @@ a:hover {
     height: 110vh;
     background-color: darkgoldenrod;
     padding-top: 3%;
+    margin: 0 3%;
 }
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
@@ -248,7 +264,7 @@ a:hover {
         box-shadow: 2px 2px 20px rgba(0,0,0,3);
         margin-right: 5%;
         position: relative;
-        bottom: 20%;
+        bottom: 15%;
     }
  }
 
