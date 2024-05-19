@@ -205,11 +205,12 @@ a:hover {
 
 /* Education */
 .Education {
-    height: 110vh;
     display: flexbox;
-    height: 110vh;
-    padding-top: 3%;
+    padding-top: 2%;
     margin: 0 3%;
+    box-sizing: border-box; 
+    font-family: 'Saira Extra Condensed', serif;
+    border-bottom: 2px solid #dbdbdb;
 }
 
 .Education #company-name {
@@ -226,22 +227,42 @@ a:hover {
 
 /* Projects */
 .Projects {
-    height: 110vh;
     display: flexbox;
-    height: 110vh;
-    background-color: darkgoldenrod;
-    padding-top: 3%;
+    padding-top: 2%;
     margin: 0 3%;
+    box-sizing: border-box; 
+    font-family: 'Saira Extra Condensed', serif;
+    border-bottom: 2px solid #dbdbdb;
 }
 
 /* Skills */
 .Skills {
-    height: 110vh;
     display: flexbox;
-    height: 110vh;
-    background-color: darkgoldenrod;
-    padding-top: 3%;
+    padding-top: 2%;
     margin: 0 3%;
+    box-sizing: border-box; 
+    font-family: 'Saira Extra Condensed', serif;
+    border-bottom: 2px solid #dbdbdb;
+}
+
+/* Leadership */
+.Leadership {
+    display: flexbox;
+    padding-top: 2%;
+    margin: 0 3%;
+    box-sizing: border-box; 
+    font-family: 'Saira Extra Condensed', serif;
+    border-bottom: 2px solid #dbdbdb;
+}
+
+/* Awards */
+.Awards {
+    display: flexbox;
+    padding-top: 2%;
+    margin: 0 3%;
+    box-sizing: border-box; 
+    font-family: 'Saira Extra Condensed', serif;
+    border-bottom: 2px solid #dbdbdb;
 }
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
