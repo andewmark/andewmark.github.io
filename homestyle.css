@@ -119,7 +119,7 @@ nav > a:hover:not(.active) {
 
 .inline {
     display: flex;
-    gap: 10px;
+    gap: 1rem;
     justify-content: flex-start; 
     margin-top: 20px;
     padding-left: 0; 
@@ -127,13 +127,12 @@ nav > a:hover:not(.active) {
 
 .inline > a {
     height: auto;
-    width: 11.5%;
-    padding-right: 1.5%;
-    padding-left: 1.5%;
+    width: auto;
+    padding: 10px 24px;
     font-size: 2.5rem;
     background-color: #153448;
     color: white;
-    border-radius: 50px;
+    border-radius: 100px;
     transition: all 0.3s ease-in-out;
     text-align: center;
     margin-left: 0; 
