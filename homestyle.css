@@ -7,12 +7,17 @@ body {
     text-transform: uppercase;
 }
 
-body::-webkit-scrollbar { 
-    display: none;
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
 }
 
 h1 {
-    font-size: 3.0vw;
+    font-size: 3rem;
     color: #153448;
     font-family: 'Saira Extra Condensed', serif;
 }
@@ -25,7 +30,6 @@ nav {
     top: 0;
     background-color: #153448;
     overflow-x: hidden;
-    box-shadow: 5px 5px 20px rgba(0,0,0,3);
     text-align: center;
 }
 
@@ -33,20 +37,16 @@ nav > a {
     padding: 12px 13px;
     margin-bottom: 1%;
     text-decoration: none;
-    font-size: 1.25vw;
+    font-size: 1.25rem;
     color: rgb(150, 150, 150);
     display: block;
     position: relative;
     top: 30%;
+    transition: color 0.3s ease-in-out;
 }
 
 nav > a:hover:not(.active) {
     color: rgb(189, 189, 189);
-    text-decoration: none;
-}
-
-nav > a:hover {
-    text-decoration: none;
 }
 
 .layout2 {
@@ -59,38 +59,38 @@ nav > a:hover {
 }
 
 .About {
-    display: flexbox;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     height: 110vh;
     margin-top: -5%;
-    justify-content: flex-end; /* Pushes content to bottom */
     border-bottom: 2px solid #dbdbdb;
+    padding: 0 5%;
 }
 
 .info {
     font-family: 'Saira Extra Condensed', serif;
     text-transform: uppercase;
-    position: relative;
-    top: 25%;
-    margin-left: 3%;
+    max-width: 50%;
 }
 
 .About img {
-    float: right;
-    width: 35%;
+    width: 30%;
     height: auto;
     border: 0.7vw solid #153448;
     border-radius: 22px;
-    box-shadow: 2px 2px 20px rgba(0,0,0,3);
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
     margin-right: 5%;
     position: relative;
-    bottom: 40%;
+    right: 0;
 }
 
 #name {
     font-weight: 1000;
-    font-size: 4.5vw;
-    margin-bottom: -4.0vw; 
-    color: #153448
+    font-size: 4rem;
+    margin-bottom: -4rem;
+    color: #153448;
 }
 
 #name span {
@@ -98,63 +98,58 @@ nav > a:hover {
 }
 
 #title {
-    font-size: 2.5vw;
-    font-weight: 500px;
+    font-size: 2rem;
+    font-weight: 500;
     color: #4e4848;
 }
 
 #statement {
-    font-size: 1.5vw;
+    font-size: 1.5rem;
 }
 
-#resume {
-    font-size: 1.0vw;
-    font-family: 'Open Sans', serif;
-    text-transform: none;
-}
-
-#line3 {
-    color: #857f7f;
-    font-size: 1.5vw;
-    font-weight: 200px;
-}
-
-a {
-    color: #dd5901;
+.About a {
+    color:#dd5901;
     text-decoration: none;
 }
 
-a:hover {
+.About a:hover {
     text-decoration: underline;
     cursor: pointer;
 }
 
+.inline {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start; 
+    margin-top: 20px;
+    padding-left: 0; 
+}
+
 .inline > a {
-    height: 4%;
-    width: 12%;
-    padding-left: 1.1%;
-    padding-right: 1.1%;
-    margin-right: 1%;
-    font-size: 2.5vw;
+    height: auto;
+    width: 11.5%;
+    padding-right: 1.5%;
+    padding-left: 1.5%;
+    font-size: 2.5rem;
     background-color: #153448;
     color: white;
-    position: relative;
-    right: 3%;
     border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    margin-left: 0; 
 }
 
 .inline > a:hover {
     background-color: #dd5901;
-    transition: 0.25s ease-in-out;
+    transform: scale(1.05);
 }
 
-
-/* Experience */
-.Experience {
-    display: flexbox;
+.Experience, .Education, .Projects, .Skills, .Leadership, .Awards {
+    display: flex;
+    flex-direction: column;
     padding-top: 2%;
     margin: 0 3%;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     font-family: 'Saira Extra Condensed', serif;
     border-bottom: 2px solid #dbdbdb;
 }
@@ -169,15 +164,13 @@ a:hover {
     float: left;
     width: 80%;
     font-family: 'Open Sans', serif;
-    text-transform: none;
 }
 
 .resume-date {
     width: 20%;
-    font-size: 1.1vw;
+    font-size: 1.1rem;
     margin-top: 0;
     font-family: 'Open Sans', serif;
-    text-transform: none;
 }
 
 .resume-date span {
@@ -185,111 +178,47 @@ a:hover {
 }
 
 .job-title {
-    margin-top: 0;
     text-transform: uppercase;
-    font-size: 1.4vw;
+    font-size: 1.4rem;
     margin-bottom: -1%;
 }
 
 .company-name {
-    text-transform: none;
-    font-size: 1.15vw;
+    font-size: 1.15rem;
     color: #857f7f;
 }
 
 .bullets {
-    font-size: 1.0vw;
+    font-size: 1rem;
 }
 
-
-
-/* Education */
-.Education {
-    display: flexbox;
-    padding-top: 2%;
-    margin: 0 3%;
-    box-sizing: border-box; 
-    font-family: 'Saira Extra Condensed', serif;
-    border-bottom: 2px solid #dbdbdb;
-}
-
-.Education #company-name {
-    color: #3f3f3f;
-    font-weight: 300;
-}
-
-.Education .bullets {
-    list-style-type: none;
-    padding: 0;
-    color: #202020;
-    font-weight: 800;
-}
-
-/* Projects */
-.Projects {
-    display: flexbox;
-    padding-top: 2%;
-    margin: 0 3%;
-    box-sizing: border-box; 
-    font-family: 'Saira Extra Condensed', serif;
-    border-bottom: 2px solid #dbdbdb;
-}
-
-/* Skills */
-.Skills {
-    display: flexbox;
-    padding-top: 2%;
-    margin: 0 3%;
-    box-sizing: border-box; 
-    font-family: 'Saira Extra Condensed', serif;
-    border-bottom: 2px solid #dbdbdb;
-}
-
-/* Leadership */
-.Leadership {
-    display: flexbox;
-    padding-top: 2%;
-    margin: 0 3%;
-    box-sizing: border-box; 
-    font-family: 'Saira Extra Condensed', serif;
-    border-bottom: 2px solid #dbdbdb;
-}
-
-/* Awards */
-.Awards {
-    display: flexbox;
-    padding-top: 2%;
-    margin: 0 3%;
-    box-sizing: border-box; 
-    font-family: 'Saira Extra Condensed', serif;
-    border-bottom: 2px solid #dbdbdb;
-}
-/* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
-
-/* Small devices (tablets, 768px and up) */
-@media (max-width: 786px) { 
+@media (max-width: 786px) {
+    nav {
+        display: none;
+        width: 0%;
+    }
+    .layout2 {
+        margin-left: 0;
+    }
+    .About {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
     .About img {
         display: none;
     }
- }
-
-/* Medium devices (desktops, 992px and up) */
-@media (max-width: 1075px) { 
-    .About img {
-        float: right;
-        width: 35%;
-        height: auto;
-        border: 0.7vw solid #153448;
-        border-radius: 22px;
-        box-shadow: 2px 2px 20px rgba(0,0,0,3);
-        margin-right: 5%;
-        position: relative;
-        bottom: 15%;
+    .info {
+        max-width: 90%;
     }
- }
+    .inline {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
 
-/* Large devices (large desktops, 1200px and up) */
-@media (max-width: 1200px) { 
-
- }
+@media (max-width: 1075px) {
+    .About img {
+        width: 35%;
+    }
+}
