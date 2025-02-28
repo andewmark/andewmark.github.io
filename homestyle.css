@@ -7,11 +7,11 @@ body {
 }
 
 body::-webkit-scrollbar {
-    width: 5px;
+    width: 10px;
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #888;
+    background-color: #153448;
     border-radius: 10px;
 }
 
@@ -20,9 +20,56 @@ h1 {
     color: #dd5901;
     font-family: 'Saira Extra Condensed', serif;
     text-transform: uppercase;
+    
 }
 
-nav {
+.navbar {
+    background-color: #153448;
+    position: relative;
+    left: 15%;
+    width: 60%; 
+    display: flex;
+    justify-content: center; /* Center items */
+    align-items: center;
+    padding: 4px;
+    border-radius: 25px;
+    box-shadow: 2px 2px 20px rgba(0,0,0,0.3);
+    margin-top: 10px;
+}
+
+/* Navigation Links Container */
+.nav-links {
+    display: flex;
+    width: 100%;
+    gap: 10px; /* Add spacing between links */
+}
+
+/* Individual Links */
+.nav-links a {
+    flex: 1; /* Makes all links equal width */
+    text-align: center;
+    padding: 9px 0;
+    color: rgb(150, 150, 150);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+    text-transform: uppercase;
+    border-radius: 22px;
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+    background: rgb(56, 130, 209);
+    color: white;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.sidebar {
     height: 100%;
     width: 15%;
     position: fixed;
@@ -43,6 +90,7 @@ nav > a {
     position: relative;
     top: 30%;
     transition: color 0.3s ease-in-out;
+    text-transform: uppercase;
 }
 
 nav > a:hover:not(.active) {
@@ -153,6 +201,11 @@ nav > a:hover:not(.active) {
     border-bottom: 2px solid #dbdbdb;
 }
 
+.Experience h1, .Education h1 , .Projects h1 , .Skills h1, .Leadership h1, .Awards h1 {
+    font-size: 4rem;
+    margin: -1%;
+}
+
 .resume-item {
     display: flex;
     width: 100%;
@@ -214,6 +267,30 @@ nav > a:hover:not(.active) {
     .inline {
         flex-direction: row;
         justify-content: center;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #1e4b6b;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
     }
 }
 
