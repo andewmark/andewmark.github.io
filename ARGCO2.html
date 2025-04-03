@@ -1,0 +1,1845 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@6.1.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@6.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@7.0.1"></script>
+</head>
+<body>
+  <div id="vis"/>
+  <script>
+    const spec = {
+  "config": {
+    "view": {"continuousWidth": 300, "continuousHeight": 300},
+    "legend": {"labelLimit": 0}
+  },
+  "data": {"name": "data-e177aee9151dcf8257ba4a03b3951ca8"},
+  "mark": {"type": "bar"},
+  "encoding": {
+    "color": {
+      "field": "Indicator Name",
+      "scale": {
+        "domain": [
+          "Transportation",
+          "Other Sectors",
+          "Manufacturing",
+          "Electricity and Heat",
+          "Residential Buildings, Commercial & public Services"
+        ],
+        "range": ["#2ca02c", "#d62728", "#ff7f0e", "#1f77b4", "#17becf"]
+      },
+      "title": "Sector",
+      "type": "nominal"
+    },
+    "tooltip": [
+      {"field": "Indicator Name", "type": "nominal"},
+      {"field": "CO2 emissions (% of total)", "type": "quantitative"}
+    ],
+    "x": {"field": "Year", "title": "Year", "type": "ordinal"},
+    "y": {
+      "field": "CO2 emissions (% of total)",
+      "scale": {"domain": [0, 100]},
+      "title": "CO2 emissions (% of total)",
+      "type": "quantitative"
+    }
+  },
+  "height": 400,
+  "params": [
+    {
+      "name": "param_1",
+      "select": {"type": "point", "fields": ["Indicator Name"]},
+      "bind": {
+        "input": "radio",
+        "options": [
+          "Transportation",
+          "Other Sectors",
+          "Manufacturing",
+          "Electricity and Heat",
+          "Residential Buildings, Commercial & public Services",
+          null
+        ],
+        "labels": [
+          "Transportation ",
+          "Other Sectors ",
+          "Manufacturing ",
+          "Electricity and Heat ",
+          "Residential Buildings, Commercial & public Services ",
+          "All"
+        ],
+        "name": "Sector: "
+      }
+    }
+  ],
+  "title": "CO2 Emissions by Sector in Argentina (% of total)",
+  "transform": [{"filter": {"param": "param_1"}}],
+  "width": 700,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+  "datasets": {
+    "data-e177aee9151dcf8257ba4a03b3951ca8": [
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1971",
+        "CO2 emissions (% of total)": 29.2399078676203
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1971",
+        "CO2 emissions (% of total)": 4.47326948721057
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1971",
+        "CO2 emissions (% of total)": 19.2993090071524
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1971",
+        "CO2 emissions (% of total)": 35.4709661777185
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1971",
+        "CO2 emissions (% of total)": 11.5165474602982
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1972",
+        "CO2 emissions (% of total)": 30.8714388316974
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1972",
+        "CO2 emissions (% of total)": 4.3931050993536
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1972",
+        "CO2 emissions (% of total)": 17.105578166148
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1972",
+        "CO2 emissions (% of total)": 37.0481206607613
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1972",
+        "CO2 emissions (% of total)": 10.593727555662
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1973",
+        "CO2 emissions (% of total)": 30.0847457627119
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1973",
+        "CO2 emissions (% of total)": 4.44342647732478
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1973",
+        "CO2 emissions (% of total)": 17.4301420064132
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1973",
+        "CO2 emissions (% of total)": 35.2725606962895
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1973",
+        "CO2 emissions (% of total)": 12.7576729271645
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1974",
+        "CO2 emissions (% of total)": 30.439761795694
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1974",
+        "CO2 emissions (% of total)": 4.80989464040312
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1974",
+        "CO2 emissions (% of total)": 18.9074667888227
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1974",
+        "CO2 emissions (% of total)": 32.9248740265689
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1974",
+        "CO2 emissions (% of total)": 12.9180027485112
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1975",
+        "CO2 emissions (% of total)": 29.7183098591549
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1975",
+        "CO2 emissions (% of total)": 5.1056338028169
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1975",
+        "CO2 emissions (% of total)": 18.0633802816901
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1975",
+        "CO2 emissions (% of total)": 33.1807511737089
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1975",
+        "CO2 emissions (% of total)": 13.9319248826291
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1976",
+        "CO2 emissions (% of total)": 28.2883689689914
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1976",
+        "CO2 emissions (% of total)": 5.32855703571029
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1976",
+        "CO2 emissions (% of total)": 18.8738385760663
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1976",
+        "CO2 emissions (% of total)": 33.1915369976492
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1976",
+        "CO2 emissions (% of total)": 14.3288928691369
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1977",
+        "CO2 emissions (% of total)": 29.2903225806452
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1977",
+        "CO2 emissions (% of total)": 4.98924731182796
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1977",
+        "CO2 emissions (% of total)": 15.9032258064516
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1977",
+        "CO2 emissions (% of total)": 34.7956989247312
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1977",
+        "CO2 emissions (% of total)": 15.010752688172
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1978",
+        "CO2 emissions (% of total)": 30.2501895375284
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1978",
+        "CO2 emissions (% of total)": 5.41535795516084
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1978",
+        "CO2 emissions (% of total)": 17.2966533087837
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1978",
+        "CO2 emissions (% of total)": 32.6654391855302
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1978",
+        "CO2 emissions (% of total)": 14.3723600129969
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1979",
+        "CO2 emissions (% of total)": 31.0620831195485
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1979",
+        "CO2 emissions (% of total)": 5.63365828630067
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1979",
+        "CO2 emissions (% of total)": 16.4391995895331
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1979",
+        "CO2 emissions (% of total)": 33.1965110312981
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1979",
+        "CO2 emissions (% of total)": 13.658286300667
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1980",
+        "CO2 emissions (% of total)": 32.8149626983293
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1980",
+        "CO2 emissions (% of total)": 5.43238415467059
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1980",
+        "CO2 emissions (% of total)": 15.7822843332983
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1980",
+        "CO2 emissions (% of total)": 32.0899443101818
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1980",
+        "CO2 emissions (% of total)": 13.8909320163917
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1981",
+        "CO2 emissions (% of total)": 33.3297861019474
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1981",
+        "CO2 emissions (% of total)": 5.5868894327977
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1981",
+        "CO2 emissions (% of total)": 14.7813131850591
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1981",
+        "CO2 emissions (% of total)": 31.2440140470363
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1981",
+        "CO2 emissions (% of total)": 15.0579972331595
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1982",
+        "CO2 emissions (% of total)": 34.0181660899654
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1982",
+        "CO2 emissions (% of total)": 5.86072664359862
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1982",
+        "CO2 emissions (% of total)": 15.3546712802768
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1982",
+        "CO2 emissions (% of total)": 30.4822664359862
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1982",
+        "CO2 emissions (% of total)": 14.284169550173
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1983",
+        "CO2 emissions (% of total)": 33.3403716216216
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1983",
+        "CO2 emissions (% of total)": 5.61655405405405
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1983",
+        "CO2 emissions (% of total)": 14.2736486486486
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1983",
+        "CO2 emissions (% of total)": 31.1338682432432
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1983",
+        "CO2 emissions (% of total)": 15.6355574324324
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1984",
+        "CO2 emissions (% of total)": 32.2314049586777
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1984",
+        "CO2 emissions (% of total)": 5.25920360631105
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1984",
+        "CO2 emissions (% of total)": 16.4215949339916
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1984",
+        "CO2 emissions (% of total)": 29.3012772351615
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1984",
+        "CO2 emissions (% of total)": 16.7757861972738
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1985",
+        "CO2 emissions (% of total)": 29.948717948718
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1985",
+        "CO2 emissions (% of total)": 7.44159544159544
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1985",
+        "CO2 emissions (% of total)": 16.9116809116809
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1985",
+        "CO2 emissions (% of total)": 29.4017094017094
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1985",
+        "CO2 emissions (% of total)": 16.2849002849003
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1986",
+        "CO2 emissions (% of total)": 29.7356143079316
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1986",
+        "CO2 emissions (% of total)": 4.93519958527734
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1986",
+        "CO2 emissions (% of total)": 13.4370139968896
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1986",
+        "CO2 emissions (% of total)": 35.8735095904614
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1986",
+        "CO2 emissions (% of total)": 16.0082944530845
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1987",
+        "CO2 emissions (% of total)": 29.0022743004054
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1987",
+        "CO2 emissions (% of total)": 5.19133788193414
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1987",
+        "CO2 emissions (% of total)": 15.633343221596
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1987",
+        "CO2 emissions (% of total)": 33.9068525660042
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1987",
+        "CO2 emissions (% of total)": 16.2859685553248
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1988",
+        "CO2 emissions (% of total)": 25.9641550154828
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1988",
+        "CO2 emissions (% of total)": 4.84188796096462
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1988",
+        "CO2 emissions (% of total)": 13.2776578774514
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1988",
+        "CO2 emissions (% of total)": 39.5327015107441
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1988",
+        "CO2 emissions (% of total)": 16.3929811391574
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1989",
+        "CO2 emissions (% of total)": 26.4495176234597
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1989",
+        "CO2 emissions (% of total)": 4.25064476072213
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1989",
+        "CO2 emissions (% of total)": 14.0987677906199
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1989",
+        "CO2 emissions (% of total)": 39.2205559270226
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1989",
+        "CO2 emissions (% of total)": 15.9900659088738
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1990",
+        "CO2 emissions (% of total)": 28.6174280539344
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1990",
+        "CO2 emissions (% of total)": 4.60857315355202
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1990",
+        "CO2 emissions (% of total)": 14.7212718856913
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1990",
+        "CO2 emissions (% of total)": 34.5139867176494
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1990",
+        "CO2 emissions (% of total)": 17.5387401891729
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1991",
+        "CO2 emissions (% of total)": 28.5987017945781
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1991",
+        "CO2 emissions (% of total)": 4.87781596029019
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1991",
+        "CO2 emissions (% of total)": 13.8125238640703
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1991",
+        "CO2 emissions (% of total)": 36.4738449789996
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1991",
+        "CO2 emissions (% of total)": 16.2371134020619
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1992",
+        "CO2 emissions (% of total)": 30.1398142066248
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1992",
+        "CO2 emissions (% of total)": 5.3204466547809
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1992",
+        "CO2 emissions (% of total)": 13.6154640142629
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1992",
+        "CO2 emissions (% of total)": 35.3851928310031
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1992",
+        "CO2 emissions (% of total)": 15.5390822933283
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1993",
+        "CO2 emissions (% of total)": 33.2929556466642
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1993",
+        "CO2 emissions (% of total)": 5.78643309727916
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1993",
+        "CO2 emissions (% of total)": 13.5669027208349
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1993",
+        "CO2 emissions (% of total)": 31.736861721953
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1993",
+        "CO2 emissions (% of total)": 15.6261647409616
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1994",
+        "CO2 emissions (% of total)": 32.3237597911227
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1994",
+        "CO2 emissions (% of total)": 6.37075718015666
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1994",
+        "CO2 emissions (% of total)": 18.4682332463011
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1994",
+        "CO2 emissions (% of total)": 28.2593559617058
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1994",
+        "CO2 emissions (% of total)": 14.5865970409051
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1995",
+        "CO2 emissions (% of total)": 32.6541052093103
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1995",
+        "CO2 emissions (% of total)": 6.62460567823344
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1995",
+        "CO2 emissions (% of total)": 17.1284849518288
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1995",
+        "CO2 emissions (% of total)": 29.1499701594339
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1995",
+        "CO2 emissions (% of total)": 14.4513598772274
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1996",
+        "CO2 emissions (% of total)": 31.6055119371896
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1996",
+        "CO2 emissions (% of total)": 6.59349463227047
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1996",
+        "CO2 emissions (% of total)": 17.8977727928217
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1996",
+        "CO2 emissions (% of total)": 30.2515622496395
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1996",
+        "CO2 emissions (% of total)": 13.6596699246916
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1997",
+        "CO2 emissions (% of total)": 31.0321100917431
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1997",
+        "CO2 emissions (% of total)": 6.16207951070336
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1997",
+        "CO2 emissions (% of total)": 21.3837920489297
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1997",
+        "CO2 emissions (% of total)": 28.6544342507645
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1997",
+        "CO2 emissions (% of total)": 12.7599388379205
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1998",
+        "CO2 emissions (% of total)": 31.3829787234042
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1998",
+        "CO2 emissions (% of total)": 5.68114657210402
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1998",
+        "CO2 emissions (% of total)": 21.1583924349882
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1998",
+        "CO2 emissions (% of total)": 29.1445035460993
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1998",
+        "CO2 emissions (% of total)": 12.6255910165485
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1999",
+        "CO2 emissions (% of total)": 29.5046661880833
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1999",
+        "CO2 emissions (% of total)": 5.59942569992821
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1999",
+        "CO2 emissions (% of total)": 19.7272074659009
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1999",
+        "CO2 emissions (% of total)": 31.8736539842067
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1999",
+        "CO2 emissions (% of total)": 13.2878679109835
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2000",
+        "CO2 emissions (% of total)": 28.8903244329601
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2000",
+        "CO2 emissions (% of total)": 5.41917886879127
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2000",
+        "CO2 emissions (% of total)": 19.4372667240884
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2000",
+        "CO2 emissions (% of total)": 32.2997416020672
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2000",
+        "CO2 emissions (% of total)": 13.953488372093
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2001",
+        "CO2 emissions (% of total)": 28.3806862288465
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2001",
+        "CO2 emissions (% of total)": 5.53485483620556
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2001",
+        "CO2 emissions (% of total)": 21.4097189877348
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2001",
+        "CO2 emissions (% of total)": 30.267039279615
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2001",
+        "CO2 emissions (% of total)": 14.4154634373544
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2002",
+        "CO2 emissions (% of total)": 28.0075651673382
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2002",
+        "CO2 emissions (% of total)": 5.8876737110435
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2002",
+        "CO2 emissions (% of total)": 21.5607269139051
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2002",
+        "CO2 emissions (% of total)": 30.0962091933229
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2002",
+        "CO2 emissions (% of total)": 14.4478250143903
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2003",
+        "CO2 emissions (% of total)": 26.7334301658895
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2003",
+        "CO2 emissions (% of total)": 6.42917208164513
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2003",
+        "CO2 emissions (% of total)": 21.8102591544989
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2003",
+        "CO2 emissions (% of total)": 30.8309762250592
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2003",
+        "CO2 emissions (% of total)": 14.1885176974237
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2004",
+        "CO2 emissions (% of total)": 25.858186036989
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2004",
+        "CO2 emissions (% of total)": 6.95420732955709
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2004",
+        "CO2 emissions (% of total)": 22.0569166723538
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2004",
+        "CO2 emissions (% of total)": 31.9388521121955
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2004",
+        "CO2 emissions (% of total)": 13.1986623899543
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2005",
+        "CO2 emissions (% of total)": 26.5140868634143
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2005",
+        "CO2 emissions (% of total)": 7.2073880746838
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2005",
+        "CO2 emissions (% of total)": 20.7990363380847
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2005",
+        "CO2 emissions (% of total)": 31.7874590109081
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2005",
+        "CO2 emissions (% of total)": 13.6987218095429
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2006",
+        "CO2 emissions (% of total)": 26.3310440425934
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2006",
+        "CO2 emissions (% of total)": 6.30080020162561
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2006",
+        "CO2 emissions (% of total)": 21.2904038812929
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2006",
+        "CO2 emissions (% of total)": 31.6993258143784
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2006",
+        "CO2 emissions (% of total)": 14.3784260601096
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2007",
+        "CO2 emissions (% of total)": 25.6447424050251
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2007",
+        "CO2 emissions (% of total)": 5.40556864166214
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2007",
+        "CO2 emissions (% of total)": 20.5109621308208
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2007",
+        "CO2 emissions (% of total)": 33.8165126532584
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2007",
+        "CO2 emissions (% of total)": 14.6161744277345
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2008",
+        "CO2 emissions (% of total)": 25.5363713557883
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2008",
+        "CO2 emissions (% of total)": 7.16105292952165
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2008",
+        "CO2 emissions (% of total)": 18.8678177186527
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2008",
+        "CO2 emissions (% of total)": 34.4523068213982
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2008",
+        "CO2 emissions (% of total)": 13.9881120860459
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2009",
+        "CO2 emissions (% of total)": 24.0184757505774
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2009",
+        "CO2 emissions (% of total)": 7.1475099188725
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2009",
+        "CO2 emissions (% of total)": 18.1915082607923
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2009",
+        "CO2 emissions (% of total)": 36.1875999289394
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2009",
+        "CO2 emissions (% of total)": 14.4489844258897
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2010",
+        "CO2 emissions (% of total)": 24.9827308312227
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2010",
+        "CO2 emissions (% of total)": 5.98664517614552
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2010",
+        "CO2 emissions (% of total)": 18.13262721621
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2010",
+        "CO2 emissions (% of total)": 35.8853327193184
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2010",
+        "CO2 emissions (% of total)": 15.0069076675109
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2011",
+        "CO2 emissions (% of total)": 27.1829120211944
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2011",
+        "CO2 emissions (% of total)": 4.8128932553262
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2011",
+        "CO2 emissions (% of total)": 17.3253118445745
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2011",
+        "CO2 emissions (% of total)": 36.8914891268352
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2011",
+        "CO2 emissions (% of total)": 13.792913125069
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2012",
+        "CO2 emissions (% of total)": 26.2837437361927
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2012",
+        "CO2 emissions (% of total)": 4.83323454927528
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2012",
+        "CO2 emissions (% of total)": 16.1000053882213
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2012",
+        "CO2 emissions (% of total)": 38.4988415324101
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2012",
+        "CO2 emissions (% of total)": 14.2787865725524
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2013",
+        "CO2 emissions (% of total)": 25.2834780684772
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2013",
+        "CO2 emissions (% of total)": 5.53681066430666
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2013",
+        "CO2 emissions (% of total)": 16.5274628021461
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2013",
+        "CO2 emissions (% of total)": 37.4025112008408
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2013",
+        "CO2 emissions (% of total)": 15.2552685436141
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2014",
+        "CO2 emissions (% of total)": 24.1671430798815
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2014",
+        "CO2 emissions (% of total)": 6.46536042825217
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2014",
+        "CO2 emissions (% of total)": 16.8702250402786
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2014",
+        "CO2 emissions (% of total)": 38.0385634842264
+      },
+      {
+        "Country Name": "Argentina",
+        "Country Code": "ARG",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2014",
+        "CO2 emissions (% of total)": 14.4639052024323
+      }
+    ]
+  }
+};
+    vegaEmbed("#vis", spec, {mode: "vega-lite"}).then(console.log).catch(console.warn);
+  </script>
+</body>
+</html>

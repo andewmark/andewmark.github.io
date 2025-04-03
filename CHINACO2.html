@@ -1,0 +1,1845 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@6.1.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@6.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@7.0.1"></script>
+</head>
+<body>
+  <div id="vis"/>
+  <script>
+    const spec = {
+  "config": {
+    "view": {"continuousWidth": 300, "continuousHeight": 300},
+    "legend": {"labelLimit": 0}
+  },
+  "data": {"name": "data-4182285942ebca1f722c712e8f47d5fa"},
+  "mark": {"type": "bar"},
+  "encoding": {
+    "color": {
+      "field": "Indicator Name",
+      "scale": {
+        "domain": [
+          "Transportation",
+          "Other Sectors",
+          "Manufacturing",
+          "Electricity and Heat",
+          "Residential Buildings, Commercial & public Services"
+        ],
+        "range": ["#2ca02c", "#d62728", "#ff7f0e", "#1f77b4", "#17becf"]
+      },
+      "title": "Sector",
+      "type": "nominal"
+    },
+    "tooltip": [
+      {"field": "Indicator Name", "type": "nominal"},
+      {"field": "CO2 emissions (% of total)", "type": "quantitative"}
+    ],
+    "x": {"field": "Year", "title": "Year", "type": "ordinal"},
+    "y": {
+      "field": "CO2 emissions (% of total)",
+      "scale": {"domain": [0, 100]},
+      "title": "CO2 emissions (% of total)",
+      "type": "quantitative"
+    }
+  },
+  "height": 400,
+  "params": [
+    {
+      "name": "param_43",
+      "select": {"type": "point", "fields": ["Indicator Name"]},
+      "bind": {
+        "input": "radio",
+        "options": [
+          "Transportation",
+          "Other Sectors",
+          "Manufacturing",
+          "Electricity and Heat",
+          "Residential Buildings, Commercial & public Services",
+          null
+        ],
+        "labels": [
+          "Transportation ",
+          "Other Sectors ",
+          "Manufacturing ",
+          "Electricity and Heat ",
+          "Residential Buildings, Commercial & public Services ",
+          "All"
+        ],
+        "name": "Sector: "
+      }
+    }
+  ],
+  "title": "CO2 Emissions by Sector in China (% of total)",
+  "transform": [{"filter": {"param": "param_43"}}],
+  "width": 700,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+  "datasets": {
+    "data-4182285942ebca1f722c712e8f47d5fa": [
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1971",
+        "CO2 emissions (% of total)": 5.82693515515849
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1971",
+        "CO2 emissions (% of total)": 6.4588487124601
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1971",
+        "CO2 emissions (% of total)": 48.7457861748081
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1971",
+        "CO2 emissions (% of total)": 17.3718548521476
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1971",
+        "CO2 emissions (% of total)": 21.5965751054257
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1972",
+        "CO2 emissions (% of total)": 6.02860338958586
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1972",
+        "CO2 emissions (% of total)": 6.57709563732153
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1972",
+        "CO2 emissions (% of total)": 48.3767756835103
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1972",
+        "CO2 emissions (% of total)": 17.6876721555986
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1972",
+        "CO2 emissions (% of total)": 21.3298531339837
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1973",
+        "CO2 emissions (% of total)": 6.29643344828384
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1973",
+        "CO2 emissions (% of total)": 6.71071817066679
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1973",
+        "CO2 emissions (% of total)": 47.6936607494156
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1973",
+        "CO2 emissions (% of total)": 18.469229522994
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1973",
+        "CO2 emissions (% of total)": 20.8311153285347
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1974",
+        "CO2 emissions (% of total)": 6.6734717023931
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1974",
+        "CO2 emissions (% of total)": 6.76193716683679
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1974",
+        "CO2 emissions (% of total)": 48.2545083361688
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1974",
+        "CO2 emissions (% of total)": 17.9902461154588
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1974",
+        "CO2 emissions (% of total)": 20.3187025065215
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1975",
+        "CO2 emissions (% of total)": 6.40247160664147
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1975",
+        "CO2 emissions (% of total)": 6.50448367321163
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1975",
+        "CO2 emissions (% of total)": 48.0515695285099
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1975",
+        "CO2 emissions (% of total)": 18.5749400071894
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1975",
+        "CO2 emissions (% of total)": 20.4655636409564
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1976",
+        "CO2 emissions (% of total)": 6.24474936992439
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1976",
+        "CO2 emissions (% of total)": 6.39036684402128
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1976",
+        "CO2 emissions (% of total)": 48.8957341547653
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1976",
+        "CO2 emissions (% of total)": 18.5372911416037
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1976",
+        "CO2 emissions (% of total)": 19.9318584896854
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1977",
+        "CO2 emissions (% of total)": 6.11024998351032
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1977",
+        "CO2 emissions (% of total)": 6.28504056460656
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1977",
+        "CO2 emissions (% of total)": 49.153255062331
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1977",
+        "CO2 emissions (% of total)": 18.4684387573379
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1977",
+        "CO2 emissions (% of total)": 19.9830156322142
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1978",
+        "CO2 emissions (% of total)": 5.87703567627462
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1978",
+        "CO2 emissions (% of total)": 6.02793450844888
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1978",
+        "CO2 emissions (% of total)": 47.3683826852702
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1978",
+        "CO2 emissions (% of total)": 21.803058799516
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1978",
+        "CO2 emissions (% of total)": 18.9228593506247
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1979",
+        "CO2 emissions (% of total)": 5.99438451731202
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1979",
+        "CO2 emissions (% of total)": 6.03234632629966
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1979",
+        "CO2 emissions (% of total)": 45.6458521351727
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1979",
+        "CO2 emissions (% of total)": 23.30138811294
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1979",
+        "CO2 emissions (% of total)": 19.0260289082757
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1980",
+        "CO2 emissions (% of total)": 5.79557119812289
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1980",
+        "CO2 emissions (% of total)": 5.78970523537175
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1980",
+        "CO2 emissions (% of total)": 44.0702449039449
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1980",
+        "CO2 emissions (% of total)": 26.2047221000147
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1980",
+        "CO2 emissions (% of total)": 18.1390233172019
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1981",
+        "CO2 emissions (% of total)": 5.88599523813034
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1981",
+        "CO2 emissions (% of total)": 6.44621519817781
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1981",
+        "CO2 emissions (% of total)": 42.8369243924193
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1981",
+        "CO2 emissions (% of total)": 25.9381841501979
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1981",
+        "CO2 emissions (% of total)": 18.8919438895482
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1982",
+        "CO2 emissions (% of total)": 5.9430738426925
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1982",
+        "CO2 emissions (% of total)": 6.37889925782328
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1982",
+        "CO2 emissions (% of total)": 43.29104789127
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1982",
+        "CO2 emissions (% of total)": 25.59271548949
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1982",
+        "CO2 emissions (% of total)": 18.7942635187242
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1983",
+        "CO2 emissions (% of total)": 5.99881478288977
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1983",
+        "CO2 emissions (% of total)": 6.2957924792587
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1983",
+        "CO2 emissions (% of total)": 43.4510020471932
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1983",
+        "CO2 emissions (% of total)": 25.38182846676
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1983",
+        "CO2 emissions (% of total)": 18.8725622238983
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1984",
+        "CO2 emissions (% of total)": 5.88024536542275
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1984",
+        "CO2 emissions (% of total)": 6.34787282015802
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1984",
+        "CO2 emissions (% of total)": 43.9106504160464
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1984",
+        "CO2 emissions (% of total)": 25.301301573378
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1984",
+        "CO2 emissions (% of total)": 18.5599298249949
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1985",
+        "CO2 emissions (% of total)": 6.02451881970117
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1985",
+        "CO2 emissions (% of total)": 5.99191727820187
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1985",
+        "CO2 emissions (% of total)": 40.4074577563988
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1985",
+        "CO2 emissions (% of total)": 27.5544538011552
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1985",
+        "CO2 emissions (% of total)": 20.0210372211184
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1986",
+        "CO2 emissions (% of total)": 6.21306967764582
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1986",
+        "CO2 emissions (% of total)": 6.0714912537296
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1986",
+        "CO2 emissions (% of total)": 40.1292926929152
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1986",
+        "CO2 emissions (% of total)": 28.1934125080442
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1986",
+        "CO2 emissions (% of total)": 19.3921488328556
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1987",
+        "CO2 emissions (% of total)": 6.07201398754234
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1987",
+        "CO2 emissions (% of total)": 5.81084034531745
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1987",
+        "CO2 emissions (% of total)": 40.0005463883729
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1987",
+        "CO2 emissions (% of total)": 29.1940771500382
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1987",
+        "CO2 emissions (% of total)": 18.9225221287291
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1988",
+        "CO2 emissions (% of total)": 5.97077731135041
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1988",
+        "CO2 emissions (% of total)": 5.7081584230699
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1988",
+        "CO2 emissions (% of total)": 39.0754598365476
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1988",
+        "CO2 emissions (% of total)": 30.3852081685628
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1988",
+        "CO2 emissions (% of total)": 18.8603962604693
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1989",
+        "CO2 emissions (% of total)": 5.98996855376718
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1989",
+        "CO2 emissions (% of total)": 5.37769766553356
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1989",
+        "CO2 emissions (% of total)": 37.4455078909472
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1989",
+        "CO2 emissions (% of total)": 33.1341412043613
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1989",
+        "CO2 emissions (% of total)": 18.0526846853907
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1990",
+        "CO2 emissions (% of total)": 5.15573667832404
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1990",
+        "CO2 emissions (% of total)": 6.09555189456343
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1990",
+        "CO2 emissions (% of total)": 35.8969912425215
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1990",
+        "CO2 emissions (% of total)": 34.9403161941097
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1990",
+        "CO2 emissions (% of total)": 17.9118856999721
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1991",
+        "CO2 emissions (% of total)": 5.22689344580847
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1991",
+        "CO2 emissions (% of total)": 5.94883752829024
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1991",
+        "CO2 emissions (% of total)": 35.6093546395995
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1991",
+        "CO2 emissions (% of total)": 36.316210593695
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1991",
+        "CO2 emissions (% of total)": 16.8987037926068
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1992",
+        "CO2 emissions (% of total)": 5.49139408389837
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1992",
+        "CO2 emissions (% of total)": 5.47298570721038
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1992",
+        "CO2 emissions (% of total)": 35.4054444965528
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1992",
+        "CO2 emissions (% of total)": 38.4695626257358
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1992",
+        "CO2 emissions (% of total)": 15.1601747919196
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1993",
+        "CO2 emissions (% of total)": 5.65687851971038
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1993",
+        "CO2 emissions (% of total)": 5.24738535800483
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1993",
+        "CO2 emissions (% of total)": 34.6556717618665
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1993",
+        "CO2 emissions (% of total)": 40.1291230893001
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1993",
+        "CO2 emissions (% of total)": 14.3109412711183
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1994",
+        "CO2 emissions (% of total)": 5.04432102967111
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1994",
+        "CO2 emissions (% of total)": 5.47128801707868
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1994",
+        "CO2 emissions (% of total)": 34.9374245846354
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1994",
+        "CO2 emissions (% of total)": 41.876024875468
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1994",
+        "CO2 emissions (% of total)": 12.6709414931469
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1995",
+        "CO2 emissions (% of total)": 4.87689984344043
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1995",
+        "CO2 emissions (% of total)": 4.77506684955041
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1995",
+        "CO2 emissions (% of total)": 37.0640924394198
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1995",
+        "CO2 emissions (% of total)": 41.0674453080621
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1995",
+        "CO2 emissions (% of total)": 12.2164955595273
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1996",
+        "CO2 emissions (% of total)": 6.56943201640617
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1996",
+        "CO2 emissions (% of total)": 3.10331500753806
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1996",
+        "CO2 emissions (% of total)": 33.7259626265194
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1996",
+        "CO2 emissions (% of total)": 46.3171418722951
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1996",
+        "CO2 emissions (% of total)": 10.2838002987372
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1997",
+        "CO2 emissions (% of total)": 5.69875455859079
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1997",
+        "CO2 emissions (% of total)": 4.07417601321131
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1997",
+        "CO2 emissions (% of total)": 33.064405146907
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1997",
+        "CO2 emissions (% of total)": 45.6911855776509
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1997",
+        "CO2 emissions (% of total)": 11.4711346590518
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1998",
+        "CO2 emissions (% of total)": 5.38688997863112
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1998",
+        "CO2 emissions (% of total)": 4.2387713397051
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1998",
+        "CO2 emissions (% of total)": 34.1285266144168
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1998",
+        "CO2 emissions (% of total)": 46.9891888828512
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1998",
+        "CO2 emissions (% of total)": 9.25662318439572
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1999",
+        "CO2 emissions (% of total)": 6.1511193257838
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1999",
+        "CO2 emissions (% of total)": 4.58109767031269
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1999",
+        "CO2 emissions (% of total)": 30.0497248237907
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1999",
+        "CO2 emissions (% of total)": 49.4044745444765
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1999",
+        "CO2 emissions (% of total)": 9.81358363563635
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2000",
+        "CO2 emissions (% of total)": 8.53833192923336
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2000",
+        "CO2 emissions (% of total)": 2.60546950942907
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2000",
+        "CO2 emissions (% of total)": 28.9365562828073
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2000",
+        "CO2 emissions (% of total)": 51.0384939407686
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2000",
+        "CO2 emissions (% of total)": 8.88114833776165
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2001",
+        "CO2 emissions (% of total)": 8.31745150646067
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2001",
+        "CO2 emissions (% of total)": 2.65118574027816
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2001",
+        "CO2 emissions (% of total)": 29.2422980849292
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2001",
+        "CO2 emissions (% of total)": 51.2255219415919
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2001",
+        "CO2 emissions (% of total)": 8.56385111172788
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2002",
+        "CO2 emissions (% of total)": 8.36473851256684
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2002",
+        "CO2 emissions (% of total)": 2.72982014697052
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2002",
+        "CO2 emissions (% of total)": 28.1728762187974
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2002",
+        "CO2 emissions (% of total)": 52.6240242472765
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2002",
+        "CO2 emissions (% of total)": 8.10854087438882
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2003",
+        "CO2 emissions (% of total)": 8.17249088244148
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2003",
+        "CO2 emissions (% of total)": 2.73847535668284
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2003",
+        "CO2 emissions (% of total)": 27.7195986793728
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2003",
+        "CO2 emissions (% of total)": 53.7583094393257
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2003",
+        "CO2 emissions (% of total)": 7.61112564217716
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2004",
+        "CO2 emissions (% of total)": 8.19775539665807
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2004",
+        "CO2 emissions (% of total)": 2.6690120273823
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2004",
+        "CO2 emissions (% of total)": 31.3763965268341
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2004",
+        "CO2 emissions (% of total)": 50.2946518155378
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2004",
+        "CO2 emissions (% of total)": 7.46218423358776
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2005",
+        "CO2 emissions (% of total)": 7.7102101681756
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2005",
+        "CO2 emissions (% of total)": 2.6274288039208
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2005",
+        "CO2 emissions (% of total)": 32.6174065758507
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2005",
+        "CO2 emissions (% of total)": 50.2251735226545
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2005",
+        "CO2 emissions (% of total)": 6.81978092939835
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2006",
+        "CO2 emissions (% of total)": 7.61067364803615
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2006",
+        "CO2 emissions (% of total)": 2.47053889136935
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2006",
+        "CO2 emissions (% of total)": 31.845395137395
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2006",
+        "CO2 emissions (% of total)": 51.5779112716646
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2006",
+        "CO2 emissions (% of total)": 6.49548105153495
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2007",
+        "CO2 emissions (% of total)": 7.45713503911993
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2007",
+        "CO2 emissions (% of total)": 2.28056587468328
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2007",
+        "CO2 emissions (% of total)": 32.7712307356958
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2007",
+        "CO2 emissions (% of total)": 51.3348390757153
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2007",
+        "CO2 emissions (% of total)": 6.15622927478562
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2008",
+        "CO2 emissions (% of total)": 7.87261215892308
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2008",
+        "CO2 emissions (% of total)": 2.23349393506525
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2008",
+        "CO2 emissions (% of total)": 33.9335217780791
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2008",
+        "CO2 emissions (% of total)": 50.1620644989468
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2008",
+        "CO2 emissions (% of total)": 5.7984589497131
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2009",
+        "CO2 emissions (% of total)": 7.53934197810769
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2009",
+        "CO2 emissions (% of total)": 2.17727622715518
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2009",
+        "CO2 emissions (% of total)": 34.3439777632607
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2009",
+        "CO2 emissions (% of total)": 50.365986783771
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2009",
+        "CO2 emissions (% of total)": 5.57341724770538
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2010",
+        "CO2 emissions (% of total)": 7.54374241765656
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2010",
+        "CO2 emissions (% of total)": 2.03787441368617
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2010",
+        "CO2 emissions (% of total)": 33.4480767608878
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2010",
+        "CO2 emissions (% of total)": 51.5682394690576
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2010",
+        "CO2 emissions (% of total)": 5.40193718738039
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2011",
+        "CO2 emissions (% of total)": 7.49686946249262
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2011",
+        "CO2 emissions (% of total)": 1.94967513290018
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2011",
+        "CO2 emissions (% of total)": 32.9571175428234
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2011",
+        "CO2 emissions (% of total)": 52.3909037212049
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2011",
+        "CO2 emissions (% of total)": 5.20543414057885
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2012",
+        "CO2 emissions (% of total)": 8.09908861763816
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2012",
+        "CO2 emissions (% of total)": 2.01845035999429
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2012",
+        "CO2 emissions (% of total)": 32.0530056362567
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2012",
+        "CO2 emissions (% of total)": 52.5268038283395
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2012",
+        "CO2 emissions (% of total)": 5.30265155777134
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2013",
+        "CO2 emissions (% of total)": 8.3861275770254
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2013",
+        "CO2 emissions (% of total)": 2.07888122603657
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2013",
+        "CO2 emissions (% of total)": 31.0723031505051
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2013",
+        "CO2 emissions (% of total)": 53.1564628729052
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2013",
+        "CO2 emissions (% of total)": 5.30622517352778
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2014",
+        "CO2 emissions (% of total)": 8.59869527322669
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2014",
+        "CO2 emissions (% of total)": 2.07462121545599
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2014",
+        "CO2 emissions (% of total)": 31.7152270946499
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2014",
+        "CO2 emissions (% of total)": 52.2530087069823
+      },
+      {
+        "Country Name": "China",
+        "Country Code": "CHN",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2014",
+        "CO2 emissions (% of total)": 5.35833766188032
+      }
+    ]
+  }
+};
+    vegaEmbed("#vis", spec, {mode: "vega-lite"}).then(console.log).catch(console.warn);
+  </script>
+</body>
+</html>

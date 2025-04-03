@@ -1,0 +1,2285 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@6.1.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@6.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@7.0.1"></script>
+</head>
+<body>
+  <div id="vis"/>
+  <script>
+    const spec = {
+  "config": {
+    "view": {"continuousWidth": 300, "continuousHeight": 300},
+    "legend": {"labelLimit": 0}
+  },
+  "data": {"name": "data-646030a75978c2b95b53bc3127406afb"},
+  "mark": {"type": "bar"},
+  "encoding": {
+    "color": {
+      "field": "Indicator Name",
+      "scale": {
+        "domain": [
+          "Transportation",
+          "Other Sectors",
+          "Manufacturing",
+          "Electricity and Heat",
+          "Residential Buildings, Commercial & public Services"
+        ],
+        "range": ["#2ca02c", "#d62728", "#ff7f0e", "#1f77b4", "#17becf"]
+      },
+      "title": "Sector",
+      "type": "nominal"
+    },
+    "tooltip": [
+      {"field": "Indicator Name", "type": "nominal"},
+      {"field": "CO2 emissions (% of total)", "type": "quantitative"}
+    ],
+    "x": {"field": "Year", "title": "Year", "type": "ordinal"},
+    "y": {
+      "field": "CO2 emissions (% of total)",
+      "scale": {"domain": [0, 100]},
+      "title": "CO2 emissions (% of total)",
+      "type": "quantitative"
+    }
+  },
+  "height": 400,
+  "params": [
+    {
+      "name": "param_47",
+      "select": {"type": "point", "fields": ["Indicator Name"]},
+      "bind": {
+        "input": "radio",
+        "options": [
+          "Transportation",
+          "Other Sectors",
+          "Manufacturing",
+          "Electricity and Heat",
+          "Residential Buildings, Commercial & public Services",
+          null
+        ],
+        "labels": [
+          "Transportation ",
+          "Other Sectors ",
+          "Manufacturing ",
+          "Electricity and Heat ",
+          "Residential Buildings, Commercial & public Services ",
+          "All"
+        ],
+        "name": "Sector: "
+      }
+    }
+  ],
+  "title": "CO2 Emissions by Sector in The United Kingdom (% of total)",
+  "transform": [{"filter": {"param": "param_47"}}],
+  "width": 700,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+  "datasets": {
+    "data-646030a75978c2b95b53bc3127406afb": [
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1960",
+        "CO2 emissions (% of total)": 10.361014667328
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1960",
+        "CO2 emissions (% of total)": 2.9954651739531
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1960",
+        "CO2 emissions (% of total)": 25.6713668249132
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1960",
+        "CO2 emissions (% of total)": 34.8561609863247
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1960",
+        "CO2 emissions (% of total)": 26.1142209310565
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1961",
+        "CO2 emissions (% of total)": 10.5999534225471
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1961",
+        "CO2 emissions (% of total)": 2.78389853281023
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1961",
+        "CO2 emissions (% of total)": 25.3757546443095
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1961",
+        "CO2 emissions (% of total)": 36.190680926533
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1961",
+        "CO2 emissions (% of total)": 25.0497124738002
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1962",
+        "CO2 emissions (% of total)": 10.0912955606662
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1962",
+        "CO2 emissions (% of total)": 3.00717820057146
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1962",
+        "CO2 emissions (% of total)": 24.4529235486793
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1962",
+        "CO2 emissions (% of total)": 37.0043208585964
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1962",
+        "CO2 emissions (% of total)": 25.4425395497944
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1963",
+        "CO2 emissions (% of total)": 9.80597975146446
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1963",
+        "CO2 emissions (% of total)": 3.1473267192632
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1963",
+        "CO2 emissions (% of total)": 24.0950800799106
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1963",
+        "CO2 emissions (% of total)": 37.9897064300951
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1963",
+        "CO2 emissions (% of total)": 24.9619070192666
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1964",
+        "CO2 emissions (% of total)": 9.9571661680718
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1964",
+        "CO2 emissions (% of total)": 3.20913788414468
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1964",
+        "CO2 emissions (% of total)": 25.1019853141148
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1964",
+        "CO2 emissions (% of total)": 38.8615039434321
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1964",
+        "CO2 emissions (% of total)": 22.8719064454719
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1965",
+        "CO2 emissions (% of total)": 9.76421451985956
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1965",
+        "CO2 emissions (% of total)": 4.02016739604306
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1965",
+        "CO2 emissions (% of total)": 25.6452069154866
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1965",
+        "CO2 emissions (% of total)": 39.046874220011
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1965",
+        "CO2 emissions (% of total)": 21.5235369485998
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1966",
+        "CO2 emissions (% of total)": 10.0605727817149
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1966",
+        "CO2 emissions (% of total)": 4.18518454965081
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1966",
+        "CO2 emissions (% of total)": 25.7254148291779
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1966",
+        "CO2 emissions (% of total)": 40.2731780977058
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1966",
+        "CO2 emissions (% of total)": 19.7556497417506
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1967",
+        "CO2 emissions (% of total)": 10.4614050303556
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1967",
+        "CO2 emissions (% of total)": 4.18907198612315
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1967",
+        "CO2 emissions (% of total)": 27.3408499566349
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1967",
+        "CO2 emissions (% of total)": 39.7103209019948
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1967",
+        "CO2 emissions (% of total)": 18.2983521248916
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1968",
+        "CO2 emissions (% of total)": 10.7356345668774
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1968",
+        "CO2 emissions (% of total)": 4.34159151376939
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1968",
+        "CO2 emissions (% of total)": 28.514909643758
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1968",
+        "CO2 emissions (% of total)": 38.3141563871324
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1968",
+        "CO2 emissions (% of total)": 18.0937078884627
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1969",
+        "CO2 emissions (% of total)": 10.7289613470083
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1969",
+        "CO2 emissions (% of total)": 4.30962482878428
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1969",
+        "CO2 emissions (% of total)": 27.7603314068085
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1969",
+        "CO2 emissions (% of total)": 39.6168108776267
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1969",
+        "CO2 emissions (% of total)": 17.5842715397722
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1970",
+        "CO2 emissions (% of total)": 11.5146232810382
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1970",
+        "CO2 emissions (% of total)": 2.75840919362128
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1970",
+        "CO2 emissions (% of total)": 26.775453547679
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1970",
+        "CO2 emissions (% of total)": 40.8935373490865
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1970",
+        "CO2 emissions (% of total)": 18.0595906772548
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1971",
+        "CO2 emissions (% of total)": 11.866344605475
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1971",
+        "CO2 emissions (% of total)": 2.66022544283414
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1971",
+        "CO2 emissions (% of total)": 25.1755233494364
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1971",
+        "CO2 emissions (% of total)": 43.0660225442834
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1971",
+        "CO2 emissions (% of total)": 17.2302737520129
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1972",
+        "CO2 emissions (% of total)": 12.6623484471018
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1972",
+        "CO2 emissions (% of total)": 1.70403587443946
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1972",
+        "CO2 emissions (% of total)": 24.8878923766816
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1972",
+        "CO2 emissions (% of total)": 42.6025577146653
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1972",
+        "CO2 emissions (% of total)": 18.141504733433
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1973",
+        "CO2 emissions (% of total)": 12.8231008216499
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1973",
+        "CO2 emissions (% of total)": 1.71742181709221
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1973",
+        "CO2 emissions (% of total)": 24.5217555867464
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1973",
+        "CO2 emissions (% of total)": 43.5143276191077
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1973",
+        "CO2 emissions (% of total)": 17.4218170922109
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1974",
+        "CO2 emissions (% of total)": 13.2930005881859
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1974",
+        "CO2 emissions (% of total)": 1.7998487522057
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1974",
+        "CO2 emissions (% of total)": 23.4669355516343
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1974",
+        "CO2 emissions (% of total)": 43.0047895134863
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1974",
+        "CO2 emissions (% of total)": 18.4354255944879
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1975",
+        "CO2 emissions (% of total)": 13.503611612724
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1975",
+        "CO2 emissions (% of total)": 2.37359355466037
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1975",
+        "CO2 emissions (% of total)": 23.0934852062787
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1975",
+        "CO2 emissions (% of total)": 43.0632726767607
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1975",
+        "CO2 emissions (% of total)": 17.9643005973052
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1976",
+        "CO2 emissions (% of total)": 13.8546660480781
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1976",
+        "CO2 emissions (% of total)": 2.2784679622661
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1976",
+        "CO2 emissions (% of total)": 22.411808168806
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1976",
+        "CO2 emissions (% of total)": 43.5830025602694
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1976",
+        "CO2 emissions (% of total)": 17.8703369589498
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1977",
+        "CO2 emissions (% of total)": 13.9680825938797
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1977",
+        "CO2 emissions (% of total)": 2.39211849252674
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1977",
+        "CO2 emissions (% of total)": 21.8985120955498
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1977",
+        "CO2 emissions (% of total)": 43.5271095516043
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1977",
+        "CO2 emissions (% of total)": 18.2141772664395
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1978",
+        "CO2 emissions (% of total)": 14.6845810207121
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1978",
+        "CO2 emissions (% of total)": 2.67700013537295
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1978",
+        "CO2 emissions (% of total)": 20.0910383105456
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1978",
+        "CO2 emissions (% of total)": 44.5681602815757
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1978",
+        "CO2 emissions (% of total)": 17.9775280898876
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1979",
+        "CO2 emissions (% of total)": 14.2084396719154
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1979",
+        "CO2 emissions (% of total)": 2.6917705975827
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1979",
+        "CO2 emissions (% of total)": 20.1666104877931
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1979",
+        "CO2 emissions (% of total)": 44.7922184234603
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1979",
+        "CO2 emissions (% of total)": 18.1409608192485
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1980",
+        "CO2 emissions (% of total)": 15.6342027766092
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1980",
+        "CO2 emissions (% of total)": 2.69597531902959
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1980",
+        "CO2 emissions (% of total)": 17.1995512550834
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1980",
+        "CO2 emissions (% of total)": 46.024400504838
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1980",
+        "CO2 emissions (% of total)": 18.4441172346095
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1981",
+        "CO2 emissions (% of total)": 15.5948408045459
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1981",
+        "CO2 emissions (% of total)": 2.71669522864616
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1981",
+        "CO2 emissions (% of total)": 17.8172634617119
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1981",
+        "CO2 emissions (% of total)": 45.121313249752
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1981",
+        "CO2 emissions (% of total)": 18.7498872553441
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1982",
+        "CO2 emissions (% of total)": 16.341837394469
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1982",
+        "CO2 emissions (% of total)": 2.76181855129224
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1982",
+        "CO2 emissions (% of total)": 17.6941124309545
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1982",
+        "CO2 emissions (% of total)": 44.2870074449022
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1982",
+        "CO2 emissions (% of total)": 18.9152241783821
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1983",
+        "CO2 emissions (% of total)": 17.0625093801591
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1983",
+        "CO2 emissions (% of total)": 2.42195707639202
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1983",
+        "CO2 emissions (% of total)": 16.9330631847516
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1983",
+        "CO2 emissions (% of total)": 44.3062434338886
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1983",
+        "CO2 emissions (% of total)": 19.2762269248086
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1984",
+        "CO2 emissions (% of total)": 18.4753119913185
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1984",
+        "CO2 emissions (% of total)": 2.54050073637702
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1984",
+        "CO2 emissions (% of total)": 16.6828152856368
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1984",
+        "CO2 emissions (% of total)": 43.1846368498566
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1984",
+        "CO2 emissions (% of total)": 19.1147973025347
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1985",
+        "CO2 emissions (% of total)": 17.7590902399529
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1985",
+        "CO2 emissions (% of total)": 2.47497423818637
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1985",
+        "CO2 emissions (% of total)": 16.1563374061534
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1985",
+        "CO2 emissions (% of total)": 43.5650669807154
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1985",
+        "CO2 emissions (% of total)": 20.0445311349919
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1986",
+        "CO2 emissions (% of total)": 18.3895480124736
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1986",
+        "CO2 emissions (% of total)": 2.44094770421879
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1986",
+        "CO2 emissions (% of total)": 15.1672102942758
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1986",
+        "CO2 emissions (% of total)": 44.0302519803577
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1986",
+        "CO2 emissions (% of total)": 19.970249829743
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1987",
+        "CO2 emissions (% of total)": 18.9202161700917
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1987",
+        "CO2 emissions (% of total)": 2.36969352200811
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1987",
+        "CO2 emissions (% of total)": 15.3043447344094
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1987",
+        "CO2 emissions (% of total)": 44.3148688046647
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1987",
+        "CO2 emissions (% of total)": 19.0890990542558
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1988",
+        "CO2 emissions (% of total)": 20.2060532601333
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1988",
+        "CO2 emissions (% of total)": 2.45267548393997
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1988",
+        "CO2 emissions (% of total)": 15.6518484189512
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1988",
+        "CO2 emissions (% of total)": 43.3424833339275
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1988",
+        "CO2 emissions (% of total)": 18.346939503048
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1989",
+        "CO2 emissions (% of total)": 21.6787560980066
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1989",
+        "CO2 emissions (% of total)": 2.43372129140706
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1989",
+        "CO2 emissions (% of total)": 14.4324057663847
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1989",
+        "CO2 emissions (% of total)": 43.9549798103452
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1989",
+        "CO2 emissions (% of total)": 17.5019641519431
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1990",
+        "CO2 emissions (% of total)": 20.987383834511
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1990",
+        "CO2 emissions (% of total)": 2.53236201639554
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1990",
+        "CO2 emissions (% of total)": 14.0457541399646
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1990",
+        "CO2 emissions (% of total)": 44.972704533421
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1990",
+        "CO2 emissions (% of total)": 17.4617954757079
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1991",
+        "CO2 emissions (% of total)": 20.4171279597157
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1991",
+        "CO2 emissions (% of total)": 2.95168029713225
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1991",
+        "CO2 emissions (% of total)": 14.0994964465555
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1991",
+        "CO2 emissions (% of total)": 43.9627156172994
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1991",
+        "CO2 emissions (% of total)": 18.5689796792972
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1992",
+        "CO2 emissions (% of total)": 21.1559891123655
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1992",
+        "CO2 emissions (% of total)": 2.56845874207632
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1992",
+        "CO2 emissions (% of total)": 12.887963318171
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1992",
+        "CO2 emissions (% of total)": 44.8840905354305
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1992",
+        "CO2 emissions (% of total)": 18.5053250762682
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1993",
+        "CO2 emissions (% of total)": 22.0508953817154
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1993",
+        "CO2 emissions (% of total)": 2.63901979264844
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1993",
+        "CO2 emissions (% of total)": 13.4891611687088
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1993",
+        "CO2 emissions (% of total)": 42.2978322337418
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1993",
+        "CO2 emissions (% of total)": 19.5249764373233
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1994",
+        "CO2 emissions (% of total)": 22.4350519011298
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1994",
+        "CO2 emissions (% of total)": 1.77400546730133
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1994",
+        "CO2 emissions (% of total)": 13.8651526447592
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1994",
+        "CO2 emissions (% of total)": 41.7808873850624
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1994",
+        "CO2 emissions (% of total)": 20.1449026017472
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1995",
+        "CO2 emissions (% of total)": 22.6425011680424
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1995",
+        "CO2 emissions (% of total)": 2.11026319887868
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1995",
+        "CO2 emissions (% of total)": 13.4675284223641
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1995",
+        "CO2 emissions (% of total)": 42.0514717333749
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1995",
+        "CO2 emissions (% of total)": 19.72823547734
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1996",
+        "CO2 emissions (% of total)": 22.6409084095338
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1996",
+        "CO2 emissions (% of total)": 1.70139409383901
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1996",
+        "CO2 emissions (% of total)": 12.7473392295008
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1996",
+        "CO2 emissions (% of total)": 41.8396792085145
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1996",
+        "CO2 emissions (% of total)": 21.0725528406536
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1997",
+        "CO2 emissions (% of total)": 23.8251558317213
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1997",
+        "CO2 emissions (% of total)": 1.53193817535221
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1997",
+        "CO2 emissions (% of total)": 13.0605545459875
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1997",
+        "CO2 emissions (% of total)": 41.2196885319577
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1997",
+        "CO2 emissions (% of total)": 20.3626629149813
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1998",
+        "CO2 emissions (% of total)": 23.5208478919171
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1998",
+        "CO2 emissions (% of total)": 1.51991614255765
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1998",
+        "CO2 emissions (% of total)": 12.4776768382638
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1998",
+        "CO2 emissions (% of total)": 41.9267800295054
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1998",
+        "CO2 emissions (% of total)": 20.5567202422548
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1999",
+        "CO2 emissions (% of total)": 24.3307578240849
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1999",
+        "CO2 emissions (% of total)": 1.48286896121127
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1999",
+        "CO2 emissions (% of total)": 12.3195192382736
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1999",
+        "CO2 emissions (% of total)": 41.9593381721689
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1999",
+        "CO2 emissions (% of total)": 19.9036135175213
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2000",
+        "CO2 emissions (% of total)": 23.5862995298858
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2000",
+        "CO2 emissions (% of total)": 1.48517701237647
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2000",
+        "CO2 emissions (% of total)": 12.0924877674374
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2000",
+        "CO2 emissions (% of total)": 43.2831238606927
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2000",
+        "CO2 emissions (% of total)": 19.5509929962583
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2001",
+        "CO2 emissions (% of total)": 22.7564701049408
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2001",
+        "CO2 emissions (% of total)": 1.43406654965082
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2001",
+        "CO2 emissions (% of total)": 12.4173731187213
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2001",
+        "CO2 emissions (% of total)": 43.778242521567
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2001",
+        "CO2 emissions (% of total)": 19.6157149792733
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2002",
+        "CO2 emissions (% of total)": 23.6862352850658
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2002",
+        "CO2 emissions (% of total)": 1.1214126336847
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2002",
+        "CO2 emissions (% of total)": 11.8373470800954
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2002",
+        "CO2 emissions (% of total)": 44.2217434792644
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2002",
+        "CO2 emissions (% of total)": 19.1313380010772
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2003",
+        "CO2 emissions (% of total)": 23.4002179386014
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2003",
+        "CO2 emissions (% of total)": 0.999511516927817
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2003",
+        "CO2 emissions (% of total)": 11.4643219479202
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2003",
+        "CO2 emissions (% of total)": 45.3443805658888
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2003",
+        "CO2 emissions (% of total)": 18.7915680306617
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2004",
+        "CO2 emissions (% of total)": 23.6454774152367
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2004",
+        "CO2 emissions (% of total)": 1.09075207449405
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2004",
+        "CO2 emissions (% of total)": 10.9300491870987
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2004",
+        "CO2 emissions (% of total)": 44.9217136635002
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2004",
+        "CO2 emissions (% of total)": 19.4120076596703
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2005",
+        "CO2 emissions (% of total)": 23.9423891556058
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2005",
+        "CO2 emissions (% of total)": 1.20493269321284
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2005",
+        "CO2 emissions (% of total)": 10.396309893627
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2005",
+        "CO2 emissions (% of total)": 45.7742633907559
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2005",
+        "CO2 emissions (% of total)": 18.6821048667985
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2006",
+        "CO2 emissions (% of total)": 24.1883086398888
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2006",
+        "CO2 emissions (% of total)": 1.04595046288472
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2006",
+        "CO2 emissions (% of total)": 10.239798696787
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2006",
+        "CO2 emissions (% of total)": 46.6734268491916
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2006",
+        "CO2 emissions (% of total)": 17.8525153512478
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2007",
+        "CO2 emissions (% of total)": 24.8412774527669
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2007",
+        "CO2 emissions (% of total)": 1.00124676321089
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2007",
+        "CO2 emissions (% of total)": 10.2733288577731
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2007",
+        "CO2 emissions (% of total)": 46.4563153351875
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2007",
+        "CO2 emissions (% of total)": 17.4259134938141
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2008",
+        "CO2 emissions (% of total)": 24.1525924176214
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2008",
+        "CO2 emissions (% of total)": 0.805086413920712
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2008",
+        "CO2 emissions (% of total)": 9.80079524428172
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2008",
+        "CO2 emissions (% of total)": 45.6261564505334
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2008",
+        "CO2 emissions (% of total)": 19.6153694736428
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2009",
+        "CO2 emissions (% of total)": 25.7511103370199
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2009",
+        "CO2 emissions (% of total)": 0.753287468431595
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2009",
+        "CO2 emissions (% of total)": 8.8413306627188
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2009",
+        "CO2 emissions (% of total)": 44.3873552207611
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2009",
+        "CO2 emissions (% of total)": 20.2625620482452
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2010",
+        "CO2 emissions (% of total)": 24.5569514062205
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2010",
+        "CO2 emissions (% of total)": 0.794865879490782
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2010",
+        "CO2 emissions (% of total)": 9.07908810637361
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2010",
+        "CO2 emissions (% of total)": 43.8057087728865
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2010",
+        "CO2 emissions (% of total)": 21.7633858350286
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2011",
+        "CO2 emissions (% of total)": 26.368363437329
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2011",
+        "CO2 emissions (% of total)": 0.825579273855135
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2011",
+        "CO2 emissions (% of total)": 8.77577084473636
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2011",
+        "CO2 emissions (% of total)": 44.9644225506294
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2011",
+        "CO2 emissions (% of total)": 19.0658638934501
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2012",
+        "CO2 emissions (% of total)": 24.9112784558123
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2012",
+        "CO2 emissions (% of total)": 0.81147753830174
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2012",
+        "CO2 emissions (% of total)": 8.30087423180126
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2012",
+        "CO2 emissions (% of total)": 45.8452350038951
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2012",
+        "CO2 emissions (% of total)": 20.1311347701896
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2013",
+        "CO2 emissions (% of total)": 25.4858362609508
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2013",
+        "CO2 emissions (% of total)": 0.965002001156224
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2013",
+        "CO2 emissions (% of total)": 8.66945346200027
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2013",
+        "CO2 emissions (% of total)": 44.0521190020901
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2013",
+        "CO2 emissions (% of total)": 20.8275892738026
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2014",
+        "CO2 emissions (% of total)": 28.452334248725
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2014",
+        "CO2 emissions (% of total)": 0.958709297763831
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2014",
+        "CO2 emissions (% of total)": 9.59690074539035
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2014",
+        "CO2 emissions (% of total)": 41.9306590819929
+      },
+      {
+        "Country Name": "United Kingdom",
+        "Country Code": "GBR",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2014",
+        "CO2 emissions (% of total)": 19.0613966261279
+      }
+    ]
+  }
+};
+    vegaEmbed("#vis", spec, {mode: "vega-lite"}).then(console.log).catch(console.warn);
+  </script>
+</body>
+</html>
