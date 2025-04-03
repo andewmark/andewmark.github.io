@@ -1,0 +1,2285 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@6.1.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@6.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@7.0.1"></script>
+</head>
+<body>
+  <div id="vis"/>
+  <script>
+    const spec = {
+  "config": {
+    "view": {"continuousWidth": 300, "continuousHeight": 300},
+    "legend": {"labelLimit": 0}
+  },
+  "data": {"name": "data-c93168870db2caccb6066ec39f8be9e6"},
+  "mark": {"type": "bar"},
+  "encoding": {
+    "color": {
+      "field": "Indicator Name",
+      "scale": {
+        "domain": [
+          "Transportation",
+          "Other Sectors",
+          "Manufacturing",
+          "Electricity and Heat",
+          "Residential Buildings, Commercial & public Services"
+        ],
+        "range": ["#2ca02c", "#d62728", "#ff7f0e", "#1f77b4", "#17becf"]
+      },
+      "title": "Sector",
+      "type": "nominal"
+    },
+    "tooltip": [
+      {"field": "Indicator Name", "type": "nominal"},
+      {"field": "CO2 emissions (% of total)", "type": "quantitative"}
+    ],
+    "x": {"field": "Year", "title": "Year", "type": "ordinal"},
+    "y": {
+      "field": "CO2 emissions (% of total)",
+      "scale": {"domain": [0, 100]},
+      "title": "CO2 emissions (% of total)",
+      "type": "quantitative"
+    }
+  },
+  "height": 400,
+  "params": [
+    {
+      "name": "param_38",
+      "select": {"type": "point", "fields": ["Indicator Name"]},
+      "bind": {
+        "input": "radio",
+        "options": [
+          "Transportation",
+          "Other Sectors",
+          "Manufacturing",
+          "Electricity and Heat",
+          "Residential Buildings, Commercial & public Services",
+          null
+        ],
+        "labels": [
+          "Transportation ",
+          "Other Sectors ",
+          "Manufacturing ",
+          "Electricity and Heat ",
+          "Residential Buildings, Commercial & public Services ",
+          "All"
+        ],
+        "name": "Sector: "
+      }
+    }
+  ],
+  "title": "CO2 Emissions by Sector in the United States (% of total)",
+  "transform": [{"filter": {"param": "param_38"}}],
+  "width": 700,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+  "datasets": {
+    "data-c93168870db2caccb6066ec39f8be9e6": [
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1960",
+        "CO2 emissions (% of total)": 23.7314042976734
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1960",
+        "CO2 emissions (% of total)": 1.90818122034019
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1960",
+        "CO2 emissions (% of total)": 27.1848283952153
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1960",
+        "CO2 emissions (% of total)": 27.6352131951727
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1960",
+        "CO2 emissions (% of total)": 19.5403728915984
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1961",
+        "CO2 emissions (% of total)": 24.1039894894471
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1961",
+        "CO2 emissions (% of total)": 1.89197016359167
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1961",
+        "CO2 emissions (% of total)": 26.182790382279
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1961",
+        "CO2 emissions (% of total)": 28.0171926652163
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1961",
+        "CO2 emissions (% of total)": 19.804057299466
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1962",
+        "CO2 emissions (% of total)": 24.2042469537513
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1962",
+        "CO2 emissions (% of total)": 1.82961343569407
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1962",
+        "CO2 emissions (% of total)": 25.6803430101513
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1962",
+        "CO2 emissions (% of total)": 28.3254529123663
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1962",
+        "CO2 emissions (% of total)": 19.960343688037
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1963",
+        "CO2 emissions (% of total)": 24.0814526874783
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1963",
+        "CO2 emissions (% of total)": 1.70530622566454
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1963",
+        "CO2 emissions (% of total)": 26.0762719282604
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1963",
+        "CO2 emissions (% of total)": 29.1279919857092
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1963",
+        "CO2 emissions (% of total)": 19.0093013755921
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1964",
+        "CO2 emissions (% of total)": 24.1559530813815
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1964",
+        "CO2 emissions (% of total)": 1.5453851257464
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1964",
+        "CO2 emissions (% of total)": 26.8211008600078
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1964",
+        "CO2 emissions (% of total)": 29.1385526332261
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1964",
+        "CO2 emissions (% of total)": 18.3390082996382
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1965",
+        "CO2 emissions (% of total)": 23.5600332351566
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1965",
+        "CO2 emissions (% of total)": 1.49230618036922
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1965",
+        "CO2 emissions (% of total)": 26.6774670998752
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1965",
+        "CO2 emissions (% of total)": 30.1361867124891
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1965",
+        "CO2 emissions (% of total)": 18.1337089660471
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1966",
+        "CO2 emissions (% of total)": 23.3852183966387
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1966",
+        "CO2 emissions (% of total)": 1.36875052872008
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1966",
+        "CO2 emissions (% of total)": 26.5812255026365
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1966",
+        "CO2 emissions (% of total)": 30.743309928658
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1966",
+        "CO2 emissions (% of total)": 17.9212136593069
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1967",
+        "CO2 emissions (% of total)": 23.598201876303
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1967",
+        "CO2 emissions (% of total)": 1.21612230715775
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1967",
+        "CO2 emissions (% of total)": 28.1578461605281
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1967",
+        "CO2 emissions (% of total)": 29.0224331132731
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1967",
+        "CO2 emissions (% of total)": 18.005396542738
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1968",
+        "CO2 emissions (% of total)": 24.1630231746618
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1968",
+        "CO2 emissions (% of total)": 1.22159615739886
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1968",
+        "CO2 emissions (% of total)": 27.1322125746659
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1968",
+        "CO2 emissions (% of total)": 30.0267360469651
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1968",
+        "CO2 emissions (% of total)": 17.4566886302523
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1969",
+        "CO2 emissions (% of total)": 24.4322249055669
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1969",
+        "CO2 emissions (% of total)": 1.15226949037092
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1969",
+        "CO2 emissions (% of total)": 25.5282680042108
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1969",
+        "CO2 emissions (% of total)": 31.3659050095981
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1969",
+        "CO2 emissions (% of total)": 17.5210848968976
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1970",
+        "CO2 emissions (% of total)": 24.5892844059248
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1970",
+        "CO2 emissions (% of total)": 1.09925951836787
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1970",
+        "CO2 emissions (% of total)": 22.8027217958748
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1970",
+        "CO2 emissions (% of total)": 32.4866521863471
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1970",
+        "CO2 emissions (% of total)": 19.0223184425542
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1971",
+        "CO2 emissions (% of total)": 25.3394868111444
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1971",
+        "CO2 emissions (% of total)": 1.81572681543531
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1971",
+        "CO2 emissions (% of total)": 20.7833790801965
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1971",
+        "CO2 emissions (% of total)": 33.0000069961218
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1971",
+        "CO2 emissions (% of total)": 19.061400297102
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1972",
+        "CO2 emissions (% of total)": 25.5030384427622
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1972",
+        "CO2 emissions (% of total)": 1.67130919220056
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1972",
+        "CO2 emissions (% of total)": 20.1286064250197
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1972",
+        "CO2 emissions (% of total)": 34.3064597005958
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1972",
+        "CO2 emissions (% of total)": 18.3905862394218
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1973",
+        "CO2 emissions (% of total)": 25.7221138367395
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1973",
+        "CO2 emissions (% of total)": 1.58079338173367
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1973",
+        "CO2 emissions (% of total)": 20.097227108453
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1973",
+        "CO2 emissions (% of total)": 35.5516465709321
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1973",
+        "CO2 emissions (% of total)": 17.0482191021418
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1974",
+        "CO2 emissions (% of total)": 25.9590790021569
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1974",
+        "CO2 emissions (% of total)": 1.807450556181
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1974",
+        "CO2 emissions (% of total)": 19.4922218378979
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1974",
+        "CO2 emissions (% of total)": 36.0538357652253
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1974",
+        "CO2 emissions (% of total)": 16.687412838539
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1975",
+        "CO2 emissions (% of total)": 27.4029442223483
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1975",
+        "CO2 emissions (% of total)": 1.97222942982386
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1975",
+        "CO2 emissions (% of total)": 17.3105670073502
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1975",
+        "CO2 emissions (% of total)": 36.2824542993408
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1975",
+        "CO2 emissions (% of total)": 17.03157541843
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1976",
+        "CO2 emissions (% of total)": 27.0046188776041
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1976",
+        "CO2 emissions (% of total)": 1.78212416374918
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1976",
+        "CO2 emissions (% of total)": 17.3593538770841
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1976",
+        "CO2 emissions (% of total)": 36.5894398419356
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1976",
+        "CO2 emissions (% of total)": 17.264679884918
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1977",
+        "CO2 emissions (% of total)": 26.8811693758406
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1977",
+        "CO2 emissions (% of total)": 1.48619335783478
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1977",
+        "CO2 emissions (% of total)": 17.8960271259049
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1977",
+        "CO2 emissions (% of total)": 37.6079085149153
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1977",
+        "CO2 emissions (% of total)": 16.1287016255044
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1978",
+        "CO2 emissions (% of total)": 27.9054117795038
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1978",
+        "CO2 emissions (% of total)": 1.48758424787481
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1978",
+        "CO2 emissions (% of total)": 17.3151787679633
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1978",
+        "CO2 emissions (% of total)": 37.1858327306269
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1978",
+        "CO2 emissions (% of total)": 16.1059924740312
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1979",
+        "CO2 emissions (% of total)": 27.1547188681801
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1979",
+        "CO2 emissions (% of total)": 1.79941033681644
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1979",
+        "CO2 emissions (% of total)": 18.7071165887047
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1979",
+        "CO2 emissions (% of total)": 37.4919520351714
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1979",
+        "CO2 emissions (% of total)": 14.8468021711273
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1980",
+        "CO2 emissions (% of total)": 27.011292881502
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1980",
+        "CO2 emissions (% of total)": 1.29359968487006
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1980",
+        "CO2 emissions (% of total)": 18.6644845514513
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1980",
+        "CO2 emissions (% of total)": 39.0819881913326
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1980",
+        "CO2 emissions (% of total)": 13.9484170596723
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1981",
+        "CO2 emissions (% of total)": 27.2618577532864
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1981",
+        "CO2 emissions (% of total)": 1.31190286580295
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1981",
+        "CO2 emissions (% of total)": 18.4623801319624
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1981",
+        "CO2 emissions (% of total)": 39.7815186483452
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1981",
+        "CO2 emissions (% of total)": 13.1823406006031
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1982",
+        "CO2 emissions (% of total)": 28.4103323766318
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1982",
+        "CO2 emissions (% of total)": 1.26307749282474
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1982",
+        "CO2 emissions (% of total)": 16.4385242107212
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1982",
+        "CO2 emissions (% of total)": 40.1305434681974
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1982",
+        "CO2 emissions (% of total)": 13.7575224516249
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1983",
+        "CO2 emissions (% of total)": 28.9647800236151
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1983",
+        "CO2 emissions (% of total)": 1.45672784690733
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1983",
+        "CO2 emissions (% of total)": 15.023976040262
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1983",
+        "CO2 emissions (% of total)": 41.1863889684597
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1983",
+        "CO2 emissions (% of total)": 13.3678942306125
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1984",
+        "CO2 emissions (% of total)": 28.5763339204888
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1984",
+        "CO2 emissions (% of total)": 1.41407835180271
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1984",
+        "CO2 emissions (% of total)": 15.8014671453098
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1984",
+        "CO2 emissions (% of total)": 40.8996856117193
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1984",
+        "CO2 emissions (% of total)": 13.3086579410912
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1985",
+        "CO2 emissions (% of total)": 28.6349185249189
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1985",
+        "CO2 emissions (% of total)": 1.54664185304576
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1985",
+        "CO2 emissions (% of total)": 15.5707686683726
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1985",
+        "CO2 emissions (% of total)": 41.5340134924064
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1985",
+        "CO2 emissions (% of total)": 12.7138790114431
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1986",
+        "CO2 emissions (% of total)": 29.3679633182428
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1986",
+        "CO2 emissions (% of total)": 1.50153101221013
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1986",
+        "CO2 emissions (% of total)": 15.090129828942
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1986",
+        "CO2 emissions (% of total)": 41.5582153154823
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1986",
+        "CO2 emissions (% of total)": 12.4821605251227
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1987",
+        "CO2 emissions (% of total)": 29.3409838613579
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1987",
+        "CO2 emissions (% of total)": 1.40511531918936
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1987",
+        "CO2 emissions (% of total)": 14.9204725021371
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1987",
+        "CO2 emissions (% of total)": 42.0425010146016
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1987",
+        "CO2 emissions (% of total)": 12.2911431754009
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1988",
+        "CO2 emissions (% of total)": 29.3696153742876
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1988",
+        "CO2 emissions (% of total)": 1.38846143518413
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1988",
+        "CO2 emissions (% of total)": 14.7934555173888
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1988",
+        "CO2 emissions (% of total)": 41.9704915797931
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1988",
+        "CO2 emissions (% of total)": 12.4781826481566
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1989",
+        "CO2 emissions (% of total)": 29.2317260927639
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1989",
+        "CO2 emissions (% of total)": 1.33894796945257
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1989",
+        "CO2 emissions (% of total)": 13.6969931788289
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1989",
+        "CO2 emissions (% of total)": 43.3903973408648
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1989",
+        "CO2 emissions (% of total)": 12.3419354180899
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1990",
+        "CO2 emissions (% of total)": 29.7110849670481
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1990",
+        "CO2 emissions (% of total)": 1.38096180074754
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1990",
+        "CO2 emissions (% of total)": 12.5827442243022
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1990",
+        "CO2 emissions (% of total)": 44.9705879290779
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1990",
+        "CO2 emissions (% of total)": 11.3546210788243
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1991",
+        "CO2 emissions (% of total)": 29.3707438380744
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1991",
+        "CO2 emissions (% of total)": 1.34392411571514
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1991",
+        "CO2 emissions (% of total)": 11.8934346243035
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1991",
+        "CO2 emissions (% of total)": 45.7444151810541
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1991",
+        "CO2 emissions (% of total)": 11.6474822408529
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1992",
+        "CO2 emissions (% of total)": 29.5745384631287
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1992",
+        "CO2 emissions (% of total)": 0.978892311508962
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1992",
+        "CO2 emissions (% of total)": 10.6985590539786
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1992",
+        "CO2 emissions (% of total)": 47.0699385995741
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1992",
+        "CO2 emissions (% of total)": 11.6784850426909
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1993",
+        "CO2 emissions (% of total)": 29.362670559988
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1993",
+        "CO2 emissions (% of total)": 0.908307031201093
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1993",
+        "CO2 emissions (% of total)": 10.7484344930504
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1993",
+        "CO2 emissions (% of total)": 47.1590668144836
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1993",
+        "CO2 emissions (% of total)": 11.8213191655207
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1994",
+        "CO2 emissions (% of total)": 29.9947048027041
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1994",
+        "CO2 emissions (% of total)": 0.910734121375475
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1994",
+        "CO2 emissions (% of total)": 10.644142834961
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1994",
+        "CO2 emissions (% of total)": 46.9902974467594
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1994",
+        "CO2 emissions (% of total)": 11.4599217266325
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1995",
+        "CO2 emissions (% of total)": 30.3086032823594
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1995",
+        "CO2 emissions (% of total)": 0.902589697191899
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1995",
+        "CO2 emissions (% of total)": 9.59299689740952
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1995",
+        "CO2 emissions (% of total)": 47.7657011972767
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1995",
+        "CO2 emissions (% of total)": 11.4301089257625
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1996",
+        "CO2 emissions (% of total)": 30.1549969597191
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1996",
+        "CO2 emissions (% of total)": 0.897360883249391
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1996",
+        "CO2 emissions (% of total)": 9.28910967574162
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1996",
+        "CO2 emissions (% of total)": 47.8763925059945
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1996",
+        "CO2 emissions (% of total)": 11.7823311879276
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1997",
+        "CO2 emissions (% of total)": 29.6851315843114
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1997",
+        "CO2 emissions (% of total)": 0.878155262445937
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1997",
+        "CO2 emissions (% of total)": 9.3874964328996
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1997",
+        "CO2 emissions (% of total)": 48.9330200461777
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1997",
+        "CO2 emissions (% of total)": 11.1160113702483
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1998",
+        "CO2 emissions (% of total)": 30.290047239325
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1998",
+        "CO2 emissions (% of total)": 0.804065758322285
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1998",
+        "CO2 emissions (% of total)": 9.46633228562248
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1998",
+        "CO2 emissions (% of total)": 49.3119088159144
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1998",
+        "CO2 emissions (% of total)": 10.1276459008159
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "1999",
+        "CO2 emissions (% of total)": 31.002177126928
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "1999",
+        "CO2 emissions (% of total)": 0.758684603446629
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "1999",
+        "CO2 emissions (% of total)": 9.17997337432609
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "1999",
+        "CO2 emissions (% of total)": 48.6297339639156
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "1999",
+        "CO2 emissions (% of total)": 10.4292470524202
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2000",
+        "CO2 emissions (% of total)": 30.4408929153729
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2000",
+        "CO2 emissions (% of total)": 0.785625168360909
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2000",
+        "CO2 emissions (% of total)": 10.0483107198049
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2000",
+        "CO2 emissions (% of total)": 48.1109906001446
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2000",
+        "CO2 emissions (% of total)": 10.6143578183262
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2001",
+        "CO2 emissions (% of total)": 30.6836225321758
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2001",
+        "CO2 emissions (% of total)": 0.848685313836943
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2001",
+        "CO2 emissions (% of total)": 9.63240882475728
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2001",
+        "CO2 emissions (% of total)": 48.4605201654196
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2001",
+        "CO2 emissions (% of total)": 10.3745847561345
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2002",
+        "CO2 emissions (% of total)": 31.4578610330843
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2002",
+        "CO2 emissions (% of total)": 0.908984166839781
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2002",
+        "CO2 emissions (% of total)": 8.86476331548001
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2002",
+        "CO2 emissions (% of total)": 48.2428172728669
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2002",
+        "CO2 emissions (% of total)": 10.525574211729
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2003",
+        "CO2 emissions (% of total)": 31.4931320028167
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2003",
+        "CO2 emissions (% of total)": 0.803479904088709
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2003",
+        "CO2 emissions (% of total)": 8.65233939761291
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2003",
+        "CO2 emissions (% of total)": 48.2556802481571
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2003",
+        "CO2 emissions (% of total)": 10.7953684473246
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2004",
+        "CO2 emissions (% of total)": 31.4439677907099
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2004",
+        "CO2 emissions (% of total)": 0.984739266500229
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2004",
+        "CO2 emissions (% of total)": 8.99451457505538
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2004",
+        "CO2 emissions (% of total)": 48.2017651816168
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2004",
+        "CO2 emissions (% of total)": 10.3748373712156
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2005",
+        "CO2 emissions (% of total)": 31.6982535025525
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2005",
+        "CO2 emissions (% of total)": 0.963475949051869
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2005",
+        "CO2 emissions (% of total)": 8.36947391126692
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2005",
+        "CO2 emissions (% of total)": 48.9420879754905
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2005",
+        "CO2 emissions (% of total)": 10.0268840303949
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2006",
+        "CO2 emissions (% of total)": 32.2370511598348
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2006",
+        "CO2 emissions (% of total)": 1.07218217456968
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2006",
+        "CO2 emissions (% of total)": 8.84951960668802
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2006",
+        "CO2 emissions (% of total)": 48.605413395315
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2006",
+        "CO2 emissions (% of total)": 9.23601218210316
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2007",
+        "CO2 emissions (% of total)": 31.7658190669485
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2007",
+        "CO2 emissions (% of total)": 0.981030134403591
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2007",
+        "CO2 emissions (% of total)": 8.54611263731432
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2007",
+        "CO2 emissions (% of total)": 49.0548483430827
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2007",
+        "CO2 emissions (% of total)": 9.65254156803016
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2008",
+        "CO2 emissions (% of total)": 30.9905254716399
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2008",
+        "CO2 emissions (% of total)": 0.971765107173572
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2008",
+        "CO2 emissions (% of total)": 8.61253134287197
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2008",
+        "CO2 emissions (% of total)": 49.3363112841597
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2008",
+        "CO2 emissions (% of total)": 10.0890482290143
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2009",
+        "CO2 emissions (% of total)": 31.6877186334809
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2009",
+        "CO2 emissions (% of total)": 0.977563883457979
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2009",
+        "CO2 emissions (% of total)": 7.95899114625957
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2009",
+        "CO2 emissions (% of total)": 48.6100233013729
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2009",
+        "CO2 emissions (% of total)": 10.7657030354286
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2010",
+        "CO2 emissions (% of total)": 31.3326039591925
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2010",
+        "CO2 emissions (% of total)": 0.95996858080624
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2010",
+        "CO2 emissions (% of total)": 8.71994838275311
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2010",
+        "CO2 emissions (% of total)": 48.7971872340823
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2010",
+        "CO2 emissions (% of total)": 10.1902918431659
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2011",
+        "CO2 emissions (% of total)": 31.7460104239428
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2011",
+        "CO2 emissions (% of total)": 0.894824105559692
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2011",
+        "CO2 emissions (% of total)": 8.90160964713649
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2011",
+        "CO2 emissions (% of total)": 48.2274307821028
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2011",
+        "CO2 emissions (% of total)": 10.2301250412582
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2012",
+        "CO2 emissions (% of total)": 33.6254409937888
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2012",
+        "CO2 emissions (% of total)": 0.931776397515528
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2012",
+        "CO2 emissions (% of total)": 8.77833540372671
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2012",
+        "CO2 emissions (% of total)": 46.952347826087
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2012",
+        "CO2 emissions (% of total)": 9.71209937888199
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2013",
+        "CO2 emissions (% of total)": 33.0829660779476
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2013",
+        "CO2 emissions (% of total)": 0.971748932526254
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2013",
+        "CO2 emissions (% of total)": 8.63502489628995
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2013",
+        "CO2 emissions (% of total)": 46.6308196669913
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2013",
+        "CO2 emissions (% of total)": 10.6794404262449
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Transportation",
+        "Indicator Code": "EN.CO2.TRAN.ZS",
+        "Year": "2014",
+        "CO2 emissions (% of total)": 33.3979881032647
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Other Sectors",
+        "Indicator Code": "EN.CO2.OTHX.ZS",
+        "Year": "2014",
+        "CO2 emissions (% of total)": 0.943933882126111
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Manufacturing",
+        "Indicator Code": "EN.CO2.MANF.ZS",
+        "Year": "2014",
+        "CO2 emissions (% of total)": 8.65556072879578
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Electricity and Heat",
+        "Indicator Code": "EN.CO2.ETOT.ZS",
+        "Year": "2014",
+        "CO2 emissions (% of total)": 45.9904061079438
+      },
+      {
+        "Country Name": "United States",
+        "Country Code": "USA",
+        "Indicator Name": "Residential Buildings, Commercial & public Services",
+        "Indicator Code": "EN.CO2.BLDG.ZS",
+        "Year": "2014",
+        "CO2 emissions (% of total)": 11.0119179863259
+      }
+    ]
+  }
+};
+    vegaEmbed("#vis", spec, {mode: "vega-lite"}).then(console.log).catch(console.warn);
+  </script>
+</body>
+</html>
