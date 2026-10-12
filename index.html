@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Andrew Markarian</title>
-  <meta name="description" content="Andrew Markarian is a software engineer based in Missouri. Work, projects and photography.">
+  <meta name="description" content="Andrew Markarian is a backend software engineer based in Missouri. Work, projects and photography.">
   <meta name="theme-color" content="#14181b">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +29,7 @@
   <section class="hero">
     <div class="hero-text">
     <h1>Andrew<br>Markarian</h1>
-    <p class="hero-line">Software engineer building licensing and credentialing systems. I take photos when I'm away from the keyboard.</p>
+    <p class="hero-line">Backend software engineer, Boston Native. <br> I take photos when I'm away from the keyboard.</p>
     <p class="hero-meta">Jefferson City, Missouri</p>
     </div>
 
@@ -43,19 +43,35 @@
     <h2>Work</h2>
     <div class="roles">
       <article class="role">
-        <p class="when">2024 – now</p>
+        <p class="when">Aug 2025 – now</p>
         <div>
-          <h3>Software Engineer, Implementation Consultant</h3>
-          <p class="org">FAST Enterprises</p>
-          <p>I build and maintain software for state government agencies. I'm one of two engineers on the issuance subsystem of a statewide credentialing system, and I work across its driver control and federal verification integrations.</p>
+          <h3>Software Engineer</h3>
+          <p class="org">FAST Enterprises · Jefferson City, MO</p>
+          <p>I build and support backend services for a statewide DMV credentialing system that handles millions of transactions. I maintain integrations with AAMVA's UNI platform over multiple REST APIs, and I own production support: reading logs, tracing data anomalies, finding root causes and shipping patches. Proactive fixes cut client-reported log volume by about 20%, and duplicate-detection logic I wrote cut redundant third-party API calls by about 25%.</p>
         </div>
       </article>
       <article class="role">
-        <p class="when">2023</p>
+        <p class="when">May – Aug 2024</p>
+        <div>
+          <h3>Implementation Consultant Intern</h3>
+          <p class="org">FAST Enterprises · Harrisburg, PA</p>
+          <p>I wrote SQL queries and managed automated data pipelines that validated, migrated and reconciled high-volume client records for a statewide tax system. I also worked with stakeholders to turn statutory tax code into rules-based backend logic.</p>
+        </div>
+      </article>
+      <article class="role">
+        <p class="when">Jan – Oct 2023</p>
         <div>
           <h3>Game Developer</h3>
-          <p class="org">Syracuse University Libraries</p>
-          <p>Worked with three other developers on a VR escape room that teaches information literacy. I helped lead the design discussions and build the game.</p>
+          <p class="org">Syracuse University Libraries · Syracuse, NY</p>
+          <p>Worked with three other developers on a VR escape room that teaches information literacy. I turned concept art and flowcharts into gameplay logic, built modular game mechanics, and fixed performance bottlenecks to keep frame rates smooth.</p>
+        </div>
+      </article>
+      <article class="role">
+        <p class="when">May 2024 – Jun 2025</p>
+        <div>
+          <h3>Co-Sponsor Chair</h3>
+          <p class="org">CuseHacks (InnovateOrange) · Syracuse, NY</p>
+          <p>I helped run Syracuse's student hackathon and secured funding from companies and campus groups. I also built a Notion-based project management system to track sprint tasks, documentation and budgets.</p>
         </div>
       </article>
     </div>
@@ -64,22 +80,31 @@
   <section id="projects" class="block">
     <h2>Projects</h2>
     <div class="projects">
+
+      <!-- LeagueManager -->
       <article class="project">
         <h3>LeagueManager</h3>
-        <p>A self-hosted app for running multi-sport leagues: schedules, rosters, standings and results in one place. Built with a friend and still in progress.</p>
-        <p class="tags">Self-hosted · Full stack · In progress</p>
+        <p>A self-hosted platform for running multi-sport leagues, built with a friend and currently in active development. I co-designed its staging infrastructure: a Raspberry Pi homelab linked via Tailscale, running private Gitea CI/CD runners that deploy Docker containers on every commit, with real-time monitoring via Netdata, Uptime Kuma, and Dozzle.</p>
+        <p class="tags">Python · Flask · Docker · Raspberry Pi · Tailscale · Gitea CI/CD · Mar 2026 – Present</p>
       </article>
+
+      <!-- Property Management Platform -->
       <article class="project">
-        <h3>Student U Marketplace</h3>
-        <p>A marketplace site for students, built with two classmates. I worked on the front end and the middleware, using Node.js, Express, EJS templates and MySQL.</p>
-        <p class="tags">Node.js · Express · MySQL · 2024</p>
-        <a href="https://github.com/andewmark">See my GitHub</a>
+        <h3>Property Management Platform</h3>
+        <p>A backend service for managing residential properties, leases, and financial transactions. Designed the relational PostgreSQL schema and built Flask API endpoints handling authentication, data validation, and core business logic.</p>
+        <p class="tags">Python · Flask · PostgreSQL · SQLAlchemy · Oct 2025 – Mar 2026</p>
+        <a href="https://github.com/andewmark/PropertyManager" target="_blank" rel="noopener">View code on GitHub →</a>
       </article>
+
+      <!-- CuseHacks Careers Discord Bot -->
       <article class="project">
-        <h3>CuseHacks</h3>
-        <p>As sponsorship chair, I secured funding from companies and campus groups for Syracuse's twice-yearly hackathon, and helped run the event and its weekly workshops.</p>
-        <p class="tags">Leadership · 2023 – 2025</p>
+        <h3>CuseHacks Careers Discord Bot</h3>
+        <p>Founded and built a student community bot with Python pipelines to scrape and normalize data from RSS feeds, GitHub, and REST APIs using automated CI/CD workflows.</p>
+        <p>Served as project lead and primary backend developer until handing off maintenance to a student lead upon graduation.</p>
+        <p class="tags">Python · REST APIs · Docker · GitHub Actions · Feb – Aug 2025</p>
+        <a href="https://github.com/innovateorange/DiscordBot" target="_blank" rel="noopener">View project on GitHub →</a>
       </article>
+
     </div>
   </section>
 
@@ -88,9 +113,9 @@
     <div class="about">
       <img class="headshot" src="images/headshot.png" alt="Andrew Markarian" width="320" height="400" onerror="this.remove()">
       <div class="about-text">
-        <p>I grew up in the Boston area and studied computer science at Syracuse University. Now I live in central Missouri and write software for state agencies.</p>
-        <p>Outside of work I'm usually outdoors with a camera, whether that's a hike, a camping trip or a game. Most of <a href="photos.html">my photos</a> come from there.</p>
-        <p>At Syracuse I helped run CuseHacks and Orange After Dark, which taught me most of what I know about getting a room full of people to show up and have a good time.</p>
+        <p>I was born and raised in Boston, MA, and studied computer science at Syracuse University, graduating magna cum laude in 2025. Now I live in central Missouri, where I write backend software with FAST Enterprises for the Missouri Department of Revenue, specifically handling the issuance subsystem for the DMV.</p>
+        <p>Outside of work, I'm usually outdoors—whether that's backpacking, climbing, or out with a camera. Some of my absolute favorite trips have been out in Washington State, particularly exploring the North Cascades on the Copper Ridge Trail. I only really got into photography after those trips, so I don't have pictures from them to share here, but most of <a href="photos.html">my current photos</a> come from more recent adventures. Ultimately, though, while those landscapes are hard to beat, being out with friends and sharing the good times and beautiful nature is what matters most to me when I'm out and about.</p>
+        <p>I’m currently tinkering with LeagueManager, an early-stage self-hosted sports league management platform running locally on a Raspberry Pi. I'm always open to collaborating on interesting software projects, so feel free to reach out if you'd like to connect.</p>
         <p><a href="images/resume_Andrew_Markarian.pdf">Resume (PDF)</a></p>
       </div>
     </div>
@@ -101,7 +126,7 @@
     <p class="contact-lede">The best way to reach me is email.</p>
     <p class="contact-links">
       <a href="mailto:amarkarian2021@gmail.com">amarkarian2021@gmail.com</a>
-      <a href="https://www.linkedin.com/in/andrew-markarian-a189981b3/">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/andrew-markarian/">LinkedIn</a>
       <a href="https://github.com/andewmark">GitHub</a>
     </p>
   </section>
