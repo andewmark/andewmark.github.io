@@ -1,0 +1,132 @@
+[
+  {
+    "file": "sample-campsite.jpg",
+    "title": "Sample campsite",
+    "place": "Sample photo",
+    "date": "",
+    "tags": [
+      "Trails"
+    ],
+    "featured": true,
+    "alt": "Sample campsite",
+    "w": 800,
+    "h": 600
+  },
+  {
+    "file": "sample-creek.jpg",
+    "title": "Sample creek",
+    "place": "Sample photo",
+    "date": "",
+    "tags": [
+      "Trails"
+    ],
+    "featured": false,
+    "alt": "Sample creek",
+    "w": 533,
+    "h": 800
+  },
+  {
+    "file": "sample-fog.jpg",
+    "title": "Sample fog",
+    "place": "Sample photo",
+    "date": "",
+    "tags": [
+      "Camping"
+    ],
+    "featured": true,
+    "alt": "Sample fog",
+    "w": 800,
+    "h": 533
+  },
+  {
+    "file": "sample-forest.jpg",
+    "title": "Sample forest",
+    "place": "Sample photo",
+    "date": "",
+    "tags": [
+      "Trails"
+    ],
+    "featured": false,
+    "alt": "Sample forest",
+    "w": 533,
+    "h": 800
+  },
+  {
+    "file": "sample-lake.jpg",
+    "title": "Sample lake",
+    "place": "Sample photo",
+    "date": "",
+    "tags": [
+      "Places"
+    ],
+    "featured": true,
+    "alt": "Sample lake",
+    "w": 600,
+    "h": 600
+  },
+  {
+    "file": "sample-overlook.jpg",
+    "title": "Sample overlook",
+    "place": "Sample photo",
+    "date": "",
+    "tags": [
+      "Places"
+    ],
+    "featured": false,
+    "alt": "Sample overlook",
+    "w": 800,
+    "h": 600
+  },
+  {
+    "file": "sample-ridge.jpg",
+    "title": "Sample ridge",
+    "place": "Sample photo",
+    "date": "",
+    "tags": [
+      "Camping"
+    ],
+    "featured": true,
+    "alt": "Sample ridge",
+    "w": 800,
+    "h": 533
+  },
+  {
+    "file": "sample-skyline.jpg",
+    "title": "Sample skyline",
+    "place": "Sample photo",
+    "date": "",
+    "tags": [
+      "Trails"
+    ],
+    "featured": false,
+    "alt": "Sample skyline",
+    "w": 800,
+    "h": 450
+  },
+  {
+    "file": "sample-sunset.jpg",
+    "title": "Sample sunset",
+    "place": "Sample photo",
+    "date": "",
+    "tags": [
+      "Places"
+    ],
+    "featured": true,
+    "alt": "Sample sunset",
+    "w": 800,
+    "h": 533
+  },
+  {
+    "file": "sample-trail.jpg",
+    "title": "Sample trail",
+    "place": "Sample photo",
+    "date": "",
+    "tags": [
+      "Camping"
+    ],
+    "featured": false,
+    "alt": "Sample trail",
+    "w": 600,
+    "h": 800
+  }
+]
