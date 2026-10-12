@@ -1,132 +1,164 @@
 [
   {
-    "file": "sample-campsite.jpg",
-    "title": "Sample campsite",
-    "place": "Sample photo",
-    "date": "",
-    "tags": [
-      "Trails"
-    ],
-    "featured": true,
-    "alt": "Sample campsite",
-    "w": 800,
-    "h": 600
-  },
-  {
-    "file": "sample-creek.jpg",
-    "title": "Sample creek",
-    "place": "Sample photo",
-    "date": "",
-    "tags": [
-      "Trails"
-    ],
+    "file": "Big_Burr_Oak_Night.jpg",
+    "title": "Big burr oak night",
+    "place": "",
+    "date": "Sep 11, 2026",
+    "tags": [],
     "featured": false,
-    "alt": "Sample creek",
-    "w": 533,
-    "h": 800
+    "alt": "Big burr oak night",
+    "w": 4459,
+    "h": 2970,
+    "exif": {
+      "camera": "Canon EOS 5D Mark II",
+      "shutter": "30 s",
+      "iso": "ISO 1250",
+      "focal_length": "50mm",
+      "taken": "2026-09-11T22:12:19"
+    }
   },
   {
-    "file": "sample-fog.jpg",
-    "title": "Sample fog",
-    "place": "Sample photo",
-    "date": "",
-    "tags": [
-      "Camping"
-    ],
-    "featured": true,
-    "alt": "Sample fog",
-    "w": 800,
-    "h": 533
-  },
-  {
-    "file": "sample-forest.jpg",
-    "title": "Sample forest",
-    "place": "Sample photo",
-    "date": "",
-    "tags": [
-      "Trails"
-    ],
+    "file": "Blue_Butterfly.jpg",
+    "title": "Blue butterfly",
+    "place": "",
+    "date": "Sep 7, 2026",
+    "tags": [],
     "featured": false,
-    "alt": "Sample forest",
-    "w": 533,
-    "h": 800
+    "alt": "Blue butterfly",
+    "w": 3739,
+    "h": 2346,
+    "exif": {
+      "camera": "Canon EOS 5D Mark II",
+      "iso": "ISO 640",
+      "taken": "2026-09-07T07:02:42"
+    }
   },
   {
-    "file": "sample-lake.jpg",
-    "title": "Sample lake",
-    "place": "Sample photo",
+    "file": "Phuocy-Bunz-Happy.png",
+    "title": "Phuocy bunz happy",
+    "place": "",
     "date": "",
-    "tags": [
-      "Places"
-    ],
-    "featured": true,
-    "alt": "Sample lake",
-    "w": 600,
-    "h": 600
-  },
-  {
-    "file": "sample-overlook.jpg",
-    "title": "Sample overlook",
-    "place": "Sample photo",
-    "date": "",
-    "tags": [
-      "Places"
-    ],
+    "tags": [],
     "featured": false,
-    "alt": "Sample overlook",
-    "w": 800,
-    "h": 600
+    "alt": "Phuocy bunz happy",
+    "w": 4261,
+    "h": 2838
   },
   {
-    "file": "sample-ridge.jpg",
-    "title": "Sample ridge",
-    "place": "Sample photo",
+    "file": "Phuocy-Bunz-In-Tree.png",
+    "title": "Phuocy bunz in tree",
+    "place": "",
     "date": "",
-    "tags": [
-      "Camping"
-    ],
-    "featured": true,
-    "alt": "Sample ridge",
-    "w": 800,
-    "h": 533
-  },
-  {
-    "file": "sample-skyline.jpg",
-    "title": "Sample skyline",
-    "place": "Sample photo",
-    "date": "",
-    "tags": [
-      "Trails"
-    ],
+    "tags": [],
     "featured": false,
-    "alt": "Sample skyline",
-    "w": 800,
-    "h": 450
+    "alt": "Phuocy bunz in tree",
+    "w": 2705,
+    "h": 4062
   },
   {
-    "file": "sample-sunset.jpg",
-    "title": "Sample sunset",
-    "place": "Sample photo",
+    "file": "Phuocy-Bunz-Jumping.png",
+    "title": "Phuocy bunz jumping",
+    "place": "",
     "date": "",
-    "tags": [
-      "Places"
-    ],
-    "featured": true,
-    "alt": "Sample sunset",
-    "w": 800,
-    "h": 533
-  },
-  {
-    "file": "sample-trail.jpg",
-    "title": "Sample trail",
-    "place": "Sample photo",
-    "date": "",
-    "tags": [
-      "Camping"
-    ],
+    "tags": [],
     "featured": false,
-    "alt": "Sample trail",
-    "w": 600,
-    "h": 800
+    "alt": "Phuocy bunz jumping",
+    "w": 4045,
+    "h": 2695
+  },
+  {
+    "file": "Phuocy-Bunz-Looking.png",
+    "title": "Phuocy bunz looking",
+    "place": "",
+    "date": "",
+    "tags": [],
+    "featured": false,
+    "alt": "Phuocy bunz looking",
+    "w": 5102,
+    "h": 3397
+  },
+  {
+    "file": "Phuocy-Bunz-Walking.png",
+    "title": "Phuocy bunz walking",
+    "place": "",
+    "date": "",
+    "tags": [],
+    "featured": false,
+    "alt": "Phuocy bunz walking",
+    "w": 4630,
+    "h": 3084
+  },
+  {
+    "file": "Rock-Formation.jpg",
+    "title": "Rock formation",
+    "place": "",
+    "date": "Oct 10, 2026",
+    "tags": [],
+    "featured": false,
+    "alt": "Rock formation",
+    "w": 2048,
+    "h": 1364,
+    "exif": {
+      "camera": "Canon Canon EOS 5D Mark II",
+      "shutter": "1/100 s",
+      "iso": "ISO 125",
+      "focal_length": "50mm",
+      "taken": "2026-10-10T06:17:14"
+    }
+  },
+  {
+    "file": "Rock-Reflection-Inverted-2.jpg",
+    "title": "Rock reflection inverted 2",
+    "place": "",
+    "date": "Oct 10, 2026",
+    "tags": [],
+    "featured": false,
+    "alt": "Rock reflection inverted 2",
+    "w": 2047,
+    "h": 1365,
+    "exif": {
+      "camera": "Canon Canon EOS 5D Mark II",
+      "shutter": "1/30 s",
+      "iso": "ISO 640",
+      "focal_length": "50mm",
+      "taken": "2026-10-10T06:34:40"
+    }
+  },
+  {
+    "file": "Rock-Reflection.jpg",
+    "title": "Rock reflection",
+    "place": "",
+    "date": "Oct 10, 2026",
+    "tags": [],
+    "featured": false,
+    "alt": "Rock reflection",
+    "w": 2047,
+    "h": 1390,
+    "exif": {
+      "camera": "Canon Canon EOS 5D Mark II",
+      "shutter": "1/100 s",
+      "iso": "ISO 125",
+      "focal_length": "50mm",
+      "taken": "2026-10-10T06:17:47"
+    }
+  },
+  {
+    "file": "Tower.jpg",
+    "title": "Tower",
+    "place": "",
+    "date": "Sep 12, 2026",
+    "tags": [],
+    "featured": false,
+    "alt": "Tower",
+    "w": 4822,
+    "h": 3211,
+    "exif": {
+      "camera": "Canon EOS 5D Mark II",
+      "lens": "0.0 mm",
+      "shutter": "1/1600 s",
+      "iso": "ISO 1250",
+      "focal_length": "50mm",
+      "taken": "2026-09-12T05:23:32"
+    }
   }
 ]
