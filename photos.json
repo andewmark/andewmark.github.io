@@ -5,7 +5,7 @@
     "place": "",
     "date": "Sep 11, 2026",
     "tags": ["Astrophotgraphy"],
-    "featured": false,
+    "featured": true,
     "alt": "Big burr oak night",
     "w": 4459,
     "h": 2970,
@@ -13,7 +13,7 @@
       "camera": "Canon EOS 5D Mark II",
       "shutter": "30 s",
       "iso": "ISO 1250",
-      "focal_length": "50mm",
+      "focal_length": "14mm",
       "taken": "2026-09-11T22:12:19"
     }
   },
@@ -102,17 +102,17 @@
       "camera": "Canon Canon EOS 5D Mark II",
       "shutter": "1/100 s",
       "iso": "ISO 125",
-      "focal_length": "50mm",
+      "focal_length": "14mm",
       "taken": "2026-10-10T06:17:14"
     }
   },
   {
     "file": "Rock-Reflection-Inverted-2.jpg",
-    "title": "Rock reflection inverted 2",
-    "place": "",
+    "title": "Rock reflection inverted",
+    "place": "Pinnacles Youth Park",
     "date": "Oct 10, 2026",
     "tags": ["Landscape"],
-    "featured": false,
+    "featured": true,
     "alt": "Rock reflection inverted 2",
     "w": 2047,
     "h": 1365,
@@ -120,7 +120,7 @@
       "camera": "Canon Canon EOS 5D Mark II",
       "shutter": "1/30 s",
       "iso": "ISO 640",
-      "focal_length": "50mm",
+      "focal_length": "14mm",
       "taken": "2026-10-10T06:34:40"
     }
   },
@@ -138,7 +138,7 @@
       "camera": "Canon Canon EOS 5D Mark II",
       "shutter": "1/100 s",
       "iso": "ISO 125",
-      "focal_length": "50mm",
+      "focal_length": "14mm",
       "taken": "2026-10-10T06:17:47"
     }
   },
@@ -148,16 +148,15 @@
     "place": "",
     "date": "Sep 12, 2026",
     "tags": ["Landscape"],
-    "featured": false,
+    "featured": true,
     "alt": "Tower",
     "w": 4822,
     "h": 3211,
     "exif": {
       "camera": "Canon EOS 5D Mark II",
-      "lens": "0.0 mm",
       "shutter": "1/1600 s",
       "iso": "ISO 1250",
-      "focal_length": "50mm",
+      "focal_length": "14mm",
       "taken": "2026-09-12T05:23:32"
     }
   }
