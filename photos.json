@@ -1,10 +1,31 @@
 [
   {
+    "file": "Bees.jpg",
+    "title": "Bees",
+    "place": "",
+    "date": "Oct 18, 2026",
+    "tags": [],
+    "featured": false,
+    "alt": "Bees",
+    "w": 2047,
+    "h": 1365,
+    "exif": {
+      "camera": "Canon EOS 5D Mark II",
+      "aperture": "f/5.6",
+      "shutter": "1/800 s",
+      "iso": "ISO 1000",
+      "focal_length": "300mm",
+      "taken": "2026-10-18T17:20:15"
+    }
+  },
+  {
     "file": "Big_Burr_Oak_Night.jpg",
     "title": "Big burr oak night",
     "place": "",
     "date": "Sep 11, 2026",
-    "tags": ["Astrophotgraphy"],
+    "tags": [
+      "Astrophotgraphy"
+    ],
     "featured": true,
     "alt": "Big burr oak night",
     "w": 4459,
@@ -13,7 +34,7 @@
       "camera": "Canon EOS 5D Mark II",
       "shutter": "30 s",
       "iso": "ISO 1250",
-      "focal_length": "14mm",
+      "focal_length": "50mm",
       "taken": "2026-09-11T22:12:19"
     }
   },
@@ -22,7 +43,9 @@
     "title": "Blue butterfly",
     "place": "",
     "date": "Sep 7, 2026",
-    "tags": ["Wildlife"],
+    "tags": [
+      "Wildlife"
+    ],
     "featured": false,
     "alt": "Blue butterfly",
     "w": 3739,
@@ -34,11 +57,164 @@
     }
   },
   {
+    "file": "Fall_River_Bend.jpg",
+    "title": "Fall river bend",
+    "place": "",
+    "date": "Oct 18, 2026",
+    "tags": [],
+    "featured": false,
+    "alt": "Fall river bend",
+    "w": 2047,
+    "h": 1365,
+    "exif": {
+      "camera": "Canon EOS 5D Mark II",
+      "aperture": "f/2.8",
+      "shutter": "1/8000 s",
+      "iso": "ISO 1000",
+      "focal_length": "50mm",
+      "taken": "2026-10-18T16:55:22"
+    }
+  },
+  {
+    "file": "Fall_Trail.jpg",
+    "title": "Fall trail",
+    "place": "",
+    "date": "Jan 1, 2008",
+    "tags": [],
+    "featured": false,
+    "alt": "Fall trail",
+    "w": 1365,
+    "h": 2047,
+    "exif": {
+      "camera": "Canon EOS 5D Mark II",
+      "aperture": "f/1.4",
+      "shutter": "1/320 s",
+      "iso": "ISO 1000",
+      "focal_length": "50mm",
+      "taken": "2008-01-01T03:07:46"
+    }
+  },
+  {
+    "file": "Golden_Stairs.jpg",
+    "title": "Golden stairs",
+    "place": "",
+    "date": "Oct 18, 2026",
+    "tags": [],
+    "featured": false,
+    "alt": "Golden stairs",
+    "w": 2047,
+    "h": 1365,
+    "exif": {
+      "camera": "Canon EOS 5D Mark II",
+      "aperture": "f/5",
+      "shutter": "1/200 s",
+      "iso": "ISO 1000",
+      "focal_length": "50mm",
+      "taken": "2026-10-18T18:13:24"
+    }
+  },
+  {
+    "file": "Gradient_Bluff.jpg",
+    "title": "Gradient bluff",
+    "place": "",
+    "date": "Oct 18, 2026",
+    "tags": [],
+    "featured": false,
+    "alt": "Gradient bluff",
+    "w": 2047,
+    "h": 1365,
+    "exif": {
+      "camera": "Canon EOS 5D Mark II",
+      "aperture": "f/5",
+      "shutter": "1/640 s",
+      "iso": "ISO 1000",
+      "focal_length": "220mm",
+      "taken": "2026-10-18T18:15:59"
+    }
+  },
+  {
+    "file": "Hugging_Branch.jpg",
+    "title": "Hugging branch",
+    "place": "",
+    "date": "Oct 18, 2026",
+    "tags": [],
+    "featured": false,
+    "alt": "Hugging branch",
+    "w": 1365,
+    "h": 2047,
+    "exif": {
+      "camera": "Canon EOS 5D Mark II",
+      "aperture": "f/4.5",
+      "shutter": "1/1600 s",
+      "iso": "ISO 1000",
+      "focal_length": "120mm",
+      "taken": "2026-10-18T17:19:18"
+    }
+  },
+  {
+    "file": "Lonely_Backpack.jpg",
+    "title": "Lonely backpack",
+    "place": "",
+    "date": "Oct 18, 2026",
+    "tags": [],
+    "featured": false,
+    "alt": "Lonely backpack",
+    "w": 2047,
+    "h": 1365,
+    "exif": {
+      "camera": "Canon EOS 5D Mark II",
+      "aperture": "f/4",
+      "shutter": "1/2500 s",
+      "iso": "ISO 1000",
+      "focal_length": "70mm",
+      "taken": "2026-10-18T17:16:32"
+    }
+  },
+  {
+    "file": "Osage_Bend.jpg",
+    "title": "Osage bend",
+    "place": "",
+    "date": "Oct 18, 2026",
+    "tags": [],
+    "featured": false,
+    "alt": "Osage bend",
+    "w": 2047,
+    "h": 1365,
+    "exif": {
+      "camera": "Canon EOS 5D Mark II",
+      "shutter": "1/5000 s",
+      "iso": "ISO 1000",
+      "focal_length": "50mm",
+      "taken": "2026-10-18T17:01:27"
+    }
+  },
+  {
+    "file": "Painted_Rock_River_Bend.jpg",
+    "title": "Painted rock river bend",
+    "place": "",
+    "date": "Oct 18, 2026",
+    "tags": [],
+    "featured": false,
+    "alt": "Painted rock river bend",
+    "w": 2047,
+    "h": 1365,
+    "exif": {
+      "camera": "Canon EOS 5D Mark II",
+      "aperture": "f/4",
+      "shutter": "1/4000 s",
+      "iso": "ISO 1000",
+      "focal_length": "50mm",
+      "taken": "2026-10-18T17:40:40"
+    }
+  },
+  {
     "file": "Phuocy-Bunz-Happy.png",
     "title": "Phuocy bunz happy",
     "place": "",
     "date": "",
-    "tags": ["People"],
+    "tags": [
+      "People"
+    ],
     "featured": false,
     "alt": "Phuocy bunz happy",
     "w": 4261,
@@ -49,7 +225,10 @@
     "title": "Phuocy bunz in tree",
     "place": "",
     "date": "",
-    "tags": ["People", "Trails"],
+    "tags": [
+      "People",
+      "Trails"
+    ],
     "featured": false,
     "alt": "Phuocy bunz in tree",
     "w": 2705,
@@ -60,7 +239,10 @@
     "title": "Phuocy bunz jumping",
     "place": "",
     "date": "",
-    "tags": ["Trails", "People"],
+    "tags": [
+      "Trails",
+      "People"
+    ],
     "featured": false,
     "alt": "Phuocy bunz jumping",
     "w": 4045,
@@ -71,7 +253,9 @@
     "title": "Phuocy bunz looking",
     "place": "",
     "date": "",
-    "tags": ["People"],
+    "tags": [
+      "People"
+    ],
     "featured": false,
     "alt": "Phuocy bunz looking",
     "w": 5102,
@@ -82,7 +266,10 @@
     "title": "Phuocy bunz walking",
     "place": "",
     "date": "",
-    "tags": ["Landscape", "People"],
+    "tags": [
+      "Landscape",
+      "People"
+    ],
     "featured": false,
     "alt": "Phuocy bunz walking",
     "w": 4630,
@@ -93,16 +280,18 @@
     "title": "Rock formation",
     "place": "",
     "date": "Oct 10, 2026",
-    "tags": ["Landscape"],
+    "tags": [
+      "Landscape"
+    ],
     "featured": false,
     "alt": "Rock formation",
     "w": 2048,
     "h": 1364,
     "exif": {
-      "camera": "Canon Canon EOS 5D Mark II",
+      "camera": "Canon EOS 5D Mark II",
       "shutter": "1/100 s",
       "iso": "ISO 125",
-      "focal_length": "14mm",
+      "focal_length": "50mm",
       "taken": "2026-10-10T06:17:14"
     }
   },
@@ -111,16 +300,18 @@
     "title": "Rock reflection inverted",
     "place": "Pinnacles Youth Park",
     "date": "Oct 10, 2026",
-    "tags": ["Landscape"],
+    "tags": [
+      "Landscape"
+    ],
     "featured": true,
     "alt": "Rock reflection inverted 2",
     "w": 2047,
     "h": 1365,
     "exif": {
-      "camera": "Canon Canon EOS 5D Mark II",
+      "camera": "Canon EOS 5D Mark II",
       "shutter": "1/30 s",
       "iso": "ISO 640",
-      "focal_length": "14mm",
+      "focal_length": "50mm",
       "taken": "2026-10-10T06:34:40"
     }
   },
@@ -129,17 +320,57 @@
     "title": "Rock reflection",
     "place": "",
     "date": "Oct 10, 2026",
-    "tags": ["Landscape"],
+    "tags": [
+      "Landscape"
+    ],
     "featured": false,
     "alt": "Rock reflection",
     "w": 2047,
     "h": 1390,
     "exif": {
-      "camera": "Canon Canon EOS 5D Mark II",
+      "camera": "Canon EOS 5D Mark II",
       "shutter": "1/100 s",
       "iso": "ISO 125",
-      "focal_length": "14mm",
+      "focal_length": "50mm",
       "taken": "2026-10-10T06:17:47"
+    }
+  },
+  {
+    "file": "Rocks.jpg",
+    "title": "Rocks",
+    "place": "",
+    "date": "Oct 18, 2026",
+    "tags": [],
+    "featured": false,
+    "alt": "Rocks",
+    "w": 2047,
+    "h": 1365,
+    "exif": {
+      "camera": "Canon EOS 5D Mark II",
+      "aperture": "f/4",
+      "shutter": "1/400 s",
+      "iso": "ISO 1000",
+      "focal_length": "50mm",
+      "taken": "2026-10-18T17:43:24"
+    }
+  },
+  {
+    "file": "Silent_Bench.jpg",
+    "title": "Silent bench",
+    "place": "",
+    "date": "Oct 18, 2026",
+    "tags": [],
+    "featured": false,
+    "alt": "Silent bench",
+    "w": 2047,
+    "h": 1365,
+    "exif": {
+      "camera": "Canon EOS 5D Mark II",
+      "aperture": "f/8",
+      "shutter": "1/250 s",
+      "iso": "ISO 1000",
+      "focal_length": "50mm",
+      "taken": "2026-10-18T17:44:08"
     }
   },
   {
@@ -147,16 +378,19 @@
     "title": "Tower",
     "place": "",
     "date": "Sep 12, 2026",
-    "tags": ["Landscape"],
+    "tags": [
+      "Landscape"
+    ],
     "featured": true,
     "alt": "Tower",
     "w": 4822,
     "h": 3211,
     "exif": {
       "camera": "Canon EOS 5D Mark II",
+      "lens": "0.0 mm",
       "shutter": "1/1600 s",
       "iso": "ISO 1250",
-      "focal_length": "14mm",
+      "focal_length": "50mm",
       "taken": "2026-09-12T05:23:32"
     }
   }
