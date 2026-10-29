@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Friendsgiving · Andrew Markarian</title>
+  <meta name="description" content="Friendsgiving details and potluck sign-up.">
+  <meta name="theme-color" content="#14181b">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="friendsgiving.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="wordmark" href="index.html">Andrew Markarian</a>
+  <nav aria-label="Primary">
+    <a href="index.html#work">Work</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="photos.html">Photos</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="fg-hero">
+    <div class="hero-text">
+      <h1>Friends&shy;giving</h1>
+      <p class="hero-line">Look below to RSVP and see what others are planning on bringing!</p>
+    </div>
+  </section>
+
+  <!-- ============ EVENT DETAILS: edit this section ============ -->
+  <section id="details" class="block">
+    <h2>The plan</h2>
+    <div class="fg-details">
+      <dl class="fg-facts">
+        <div>
+          <dt>Date</dt>
+          <dd>Saturday, November 14, 2026</dd>
+        </div>
+        <div>
+          <dt>Time</dt>
+          <dd>4:30pm</dd>
+        </div>
+        <div>
+          <dt>Where</dt>
+          <dd>
+            Ask Andrew for Address If needed<br
+          </dd>
+        </div>
+        <div>
+          <dt>RSVP</dt>
+          <dd>Fill out the RSVP below, whether or not you're bringing food.</dd>
+        </div>
+      </dl>
+      <div class="fg-desc">
+        <p>Please fell free to bring just yourself but I encourage everyone to bring a dish! Do not feel the need to bring traditional thanksgiving food unless you'd like too!</p>
+        <p> I am requesting people to bring additional tables and chairs if they have them. Let me know if you are able to provide! </p>
+        <p>Everyone is welcome to bring additional people with them, just make sure they RSVP as well!</p>
+      </div>
+    </div>
+  </section>
+  <!-- ============ END EVENT DETAILS ============ -->
+
+  <section id="list" class="block">
+    <h2>Who's coming &amp; what they're bringing</h2>
+    <p class="fg-summary" id="fg-summary" aria-live="polite">Loading…</p>
+    <p class="fg-banner" id="fg-demo" hidden>Demo mode: entries are saved only in this browser. See the setup steps to share them with everyone.</p>
+    <div id="fg-guests" class="fg-guests" hidden>
+      <h3>Guest list</h3>
+      <ul id="fg-guest-list" class="fg-chips"></ul>
+    </div>
+    <div id="fg-list" class="fg-list" aria-live="polite"></div>
+  </section>
+
+  <section id="signup" class="block">
+    <h2>RSVP</h2>
+    <form id="fg-form" class="fg-form" novalidate>
+      <div class="fg-field fg-full">
+        <label for="f-name">Your name</label>
+        <input id="f-name" name="name" type="text" maxlength="60" autocomplete="name" required>
+      </div>
+
+      <fieldset class="fg-field fg-full fg-choice">
+        <legend>Are you coming?</legend>
+        <label><input type="radio" name="coming" value="Yes" required> Yes</label>
+        <label><input type="radio" name="coming" value="Maybe"> Maybe</label>
+        <label><input type="radio" name="coming" value="No"> Can't make it</label>
+      </fieldset>
+
+      <fieldset class="fg-field fg-full fg-choice" id="fg-bring-q" hidden>
+        <legend>Are you bringing something?</legend>
+        <label><input type="radio" name="bringing" value="Yes"> Yes</label>
+        <label><input type="radio" name="bringing" value="No"> No, just me</label>
+      </fieldset>
+
+      <div id="fg-dish-fields" class="fg-dish-fields fg-full" hidden>
+        <div id="fg-dishes" class="fg-dish-rows"></div>
+        <button type="button" class="fg-btn-ghost" id="fg-add-dish">+ Add another dish</button>
+      </div>
+
+      <!-- honeypot: real people never see or fill this -->
+      <div class="fg-hp" aria-hidden="true">
+        <label>Leave blank <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+      </div>
+      <div class="fg-actions">
+        <button type="submit" class="fg-btn" id="fg-submit">Send RSVP</button>
+        <p class="fg-status" id="fg-status" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© <span id="year">2026</span> Andrew Markarian</p>
+</footer>
+
+<script src="friendsgiving.js"></script>
+</body>
+</html>
